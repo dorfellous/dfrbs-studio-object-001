@@ -108,8 +108,39 @@ const PAGES = {
 function objectFromLocation() {
   const code = new URLSearchParams(window.location.search).get("object");
   if (code === "000") return "studio";
+  if (code === "001") return "eyewear";
   if (code === "002") return "lighter";
-  return "eyewear";
+  return "landing";
+}
+
+function LandingPage({ onChange }) {
+  return (
+    <main className="landing" aria-label="DFRBS Studio opening page">
+      <video
+        className="landing-film"
+        src={asset("object-001-campaign-film.mp4")}
+        poster={asset("object-001-campaign-film-poster.webp")}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        aria-label="DFRBS Studio campaign film"
+      />
+      <div className="landing-shade" aria-hidden="true" />
+      <div className="landing-logo">
+        <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
+      </div>
+      <nav className="landing-nav" aria-label="Enter DFRBS Studio">
+        {Object.entries(PAGES).map(([key, page], index) => (
+          <button key={key} type="button" style={{ "--delay": `${1.05 + index * 0.18}s` }} onClick={() => onChange(key)}>
+            <span>{page.code}</span> {page.navLabel}
+          </button>
+        ))}
+      </nav>
+      <span className="landing-year">2026—2040 / RIGHT NOW</span>
+    </main>
+  );
 }
 
 function ProductImage({ objectKey, color, className = "", alt, loading = "lazy" }) {
@@ -253,9 +284,10 @@ export function App() {
   const [added, setAdded] = useState(false);
   const [filmMuted, setFilmMuted] = useState(true);
 
+  const isLanding = activeObject === "landing";
   const isStudio = activeObject === "studio";
-  const object = isStudio ? null : OBJECTS[activeObject];
-  const activeColor = isStudio ? "studio" : activeColors[activeObject];
+  const object = isLanding || isStudio ? null : OBJECTS[activeObject];
+  const activeColor = isLanding ? "landing" : isStudio ? "studio" : activeColors[activeObject];
   const selected = useMemo(() => object?.colorways[activeColor] || null, [object, activeColor]);
   const isRequest = object?.price === "PRICE ON REQUEST";
 
@@ -267,11 +299,11 @@ export function App() {
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen || mobileNavOpen ? "hidden" : "";
-    document.title = isStudio ? "OUR STUDIO — DFRBS STUDIO" : `${object.title} — DFRBS STUDIO`;
+    document.title = isLanding ? "DFRBS STUDIO" : isStudio ? "OUR STUDIO — DFRBS STUDIO" : `${object.title} — DFRBS STUDIO`;
     return () => {
       document.body.style.overflow = "";
     };
-  }, [drawerOpen, mobileNavOpen, isStudio, object?.title]);
+  }, [drawerOpen, mobileNavOpen, isLanding, isStudio, object?.title]);
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -284,9 +316,10 @@ export function App() {
       return;
     }
     const url = new URL(window.location.href);
-    if (nextObject === "studio") url.searchParams.set("object", "000");
+    if (nextObject === "landing") url.searchParams.delete("object");
+    else if (nextObject === "studio") url.searchParams.set("object", "000");
+    else if (nextObject === "eyewear") url.searchParams.set("object", "001");
     else if (nextObject === "lighter") url.searchParams.set("object", "002");
-    else url.searchParams.delete("object");
     window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
     setActiveObject(nextObject);
     setAdded(false);
@@ -306,10 +339,12 @@ export function App() {
     setAdded(true);
   };
 
+  if (isLanding) return <LandingPage onChange={changeObject} />;
+
   return (
     <main className={`site object-${activeObject} color-${activeColor}`}>
       <header className="topbar">
-        <button className="brand-button" type="button" onClick={() => scrollTo("top")} aria-label="Back to top">
+        <button className="brand-button" type="button" onClick={() => changeObject("landing")} aria-label="Back to opening page">
           <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
         </button>
 

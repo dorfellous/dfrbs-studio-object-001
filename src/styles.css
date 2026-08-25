@@ -32,6 +32,120 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 640px;
+  overflow: hidden;
+  background: #020202;
+  isolation: isolate;
+}
+
+.landing-film,
+.landing-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-film {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center 44%;
+  filter: brightness(.76) contrast(1.08) saturate(.86);
+}
+
+.landing-shade {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.32) 0%, rgba(0,0,0,.04) 46%, rgba(0,0,0,.82) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.5) 0%, transparent 55%);
+}
+
+.landing-logo {
+  position: absolute;
+  top: 30px;
+  left: clamp(24px, 4vw, 72px);
+  width: clamp(155px, 15vw, 232px);
+  opacity: 0;
+  animation: landing-reveal 1.25s cubic-bezier(.2,.7,.2,1) .25s forwards;
+}
+
+.landing-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.landing-nav {
+  position: absolute;
+  left: clamp(24px, 4vw, 72px);
+  bottom: clamp(92px, 12vh, 142px);
+  display: grid;
+  gap: 13px;
+}
+
+.landing-nav button {
+  position: relative;
+  width: max-content;
+  padding: 3px 0 6px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: clamp(34px, 4vw, 66px);
+  line-height: 1;
+  letter-spacing: .02em;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: landing-reveal 1s cubic-bezier(.2,.7,.2,1) var(--delay) forwards;
+}
+
+.landing-nav button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent, #ff3159);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms ease;
+}
+
+.landing-nav button:hover::after,
+.landing-nav button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.landing-nav button span {
+  display: inline-block;
+  width: 62px;
+  color: #a7a7a3;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: .28em;
+  vertical-align: .32em;
+}
+
+.landing-year {
+  position: absolute;
+  right: clamp(24px, 4vw, 72px);
+  bottom: 36px;
+  color: rgba(255,255,255,.72);
+  font-size: 10px;
+  letter-spacing: .08em;
+  opacity: 0;
+  animation: landing-reveal 1s ease 1.7s forwards;
+}
+
+@keyframes landing-reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
 button,
 a {
   color: inherit;
@@ -1265,6 +1379,41 @@ a,
 }
 
 @media (max-width: 720px) {
+  .landing {
+    min-height: 600px;
+  }
+
+  .landing-film {
+    object-position: center;
+  }
+
+  .landing-logo {
+    top: 24px;
+    left: 20px;
+    width: 144px;
+  }
+
+  .landing-nav {
+    right: 20px;
+    bottom: 92px;
+    left: 20px;
+    gap: 18px;
+  }
+
+  .landing-nav button {
+    font-size: clamp(39px, 12vw, 54px);
+  }
+
+  .landing-nav button span {
+    width: 54px;
+  }
+
+  .landing-year {
+    right: auto;
+    bottom: 28px;
+    left: 20px;
+  }
+
   .topbar {
     grid-template-columns: 1fr auto auto;
     gap: 18px;
@@ -1678,5 +1827,7 @@ a,
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
   }
 }
