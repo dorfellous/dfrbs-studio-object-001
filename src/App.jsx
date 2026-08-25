@@ -16,27 +16,27 @@ const COLORWAYS = {
   black: {
     label: "BLACK",
     number: "01",
-    product: asset("product-black-cutout.png"),
+    product: asset("product-black-four-lens-v3.png"),
     fallback: asset("black-product-original.jpg"),
-    card: asset("product-black-white.jpg"),
+    card: asset("product-black-four-lens-v3.png"),
     campaign: asset("campaign-mirror-black.jpg"),
     description: "Gloss black. Dense, reflective and deliberately severe.",
   },
   pearl: {
     label: "PEARL",
     number: "02",
-    product: asset("product-pearl-cutout.png"),
+    product: asset("product-pearl-four-lens-v3.png"),
     fallback: asset("product-pearl-white.jpg"),
-    card: asset("product-pearl-white.jpg"),
+    card: asset("product-pearl-four-lens-v3.png"),
     campaign: asset("campaign-pearl.jpg"),
     description: "A translucent pearl finish that reveals the printed topology.",
   },
   heat: {
     label: "HEAT",
     number: "03",
-    product: asset("product-heat-cutout-v2.png"),
+    product: asset("product-heat-four-lens-v3.png"),
     fallback: asset("product-heat-white.jpg"),
-    card: asset("product-heat-white.jpg"),
+    card: asset("product-heat-four-lens-v3.png"),
     campaign: asset("campaign-heat.jpg"),
     description: "Safety orange shifting into saturated hot pink.",
   },
@@ -169,7 +169,7 @@ export function App() {
         </div>
 
         <div className="object-product-wrap">
-          <ProductImage color="black" className="object-product" />
+          <ProductImage color={activeColor} className="object-product" />
         </div>
 
         <div className="object-facts" id="about">
@@ -196,7 +196,7 @@ export function App() {
         {Object.entries(COLORWAYS).map(([key, item]) => (
           <button
             key={key}
-            className={`collection-card ${activeColor === key ? "is-active" : ""}`}
+            className={`collection-card colorway-${key} ${activeColor === key ? "is-active" : ""}`}
             type="button"
             onClick={() => chooseColor(key, true)}
           >

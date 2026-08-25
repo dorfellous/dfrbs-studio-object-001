@@ -39,10 +39,20 @@ No open P0 or P1 issues.
 - Post-fix evidence: the live browser capture at `#campaign` shows the complete HEAT product, transparent openings, no white matte, and left/right breathing room inside the 1363 px viewport.
 - Focused region evidence was the campaign product itself; no additional crop was needed because the eyewear occupies most of the captured viewport and its full edge is readable.
 
+### Pass 4 — four-lens production assets
+
+- Replaced every product display with new BLACK, PEARL, and HEAT RGBA PNGs built from the same source-accurate product geometry.
+- Confirmed all three assets preserve four strongly convex lenses — upper and lower on each eye — plus the narrow nose bridge, perforations, and both temples.
+- Normalized all colorways to a shared 1600 × 1200 transparent canvas so switching color does not change scale or alignment.
+- Decontaminated the outer alpha band from the object interior and removed the final white/gray matte from partially transparent edge pixels.
+- Reduced the oversized campaign product to 92vw on desktop and 96vw on mobile; the full silhouette remains visible with breathing room at both sides.
+- Replaced the white collection photographs with the new transparent product assets on dark tonal card backgrounds.
+- Browser verification at the campaign, object, and collection sections confirmed complete silhouettes, transparent openings, clean edges, and consistent BLACK / PEARL / HEAT presentation.
+
 ## Functional verification
 
 - BLACK / PEARL / HEAT controls update the campaign and product state.
-- Deployed cutout dimensions loaded successfully: BLACK 1446 px, PEARL 1265 px, HEAT 1920 px.
+- Product cutout dimensions loaded successfully: BLACK, PEARL, and HEAT are all 1600 × 1200 px.
 - Campaign CTA scrolls to the product section.
 - Product drawer opens and closes.
 - Adding a product updates the local bag count and button state.

@@ -318,8 +318,9 @@ a,
   z-index: 2;
   left: 50%;
   top: 56%;
-  width: min(96vw, 1440px);
+  width: min(92vw, 1460px);
   max-width: none;
+  max-height: 96%;
   transform: translate(-50%, -50%);
   object-fit: contain;
   filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.72));
@@ -426,10 +427,18 @@ a,
   min-width: 0;
   padding: 0;
   border-right: 1px solid var(--hairline);
-  background: #161616;
+  background: radial-gradient(circle at 50% 46%, #303030 0%, #171717 72%);
   cursor: pointer;
   text-align: left;
   overflow: hidden;
+}
+
+.collection-card.colorway-pearl {
+  background: radial-gradient(circle at 50% 46%, #696d70 0%, #343638 76%);
+}
+
+.collection-card.colorway-heat {
+  background: radial-gradient(circle at 50% 46%, #33272a 0%, #171717 74%);
 }
 
 .collection-card:last-child {
@@ -440,9 +449,10 @@ a,
   display: block;
   width: 100%;
   aspect-ratio: 1.35 / 1;
-  object-fit: cover;
-  object-position: center 42%;
-  filter: brightness(0.68) saturate(0.76);
+  padding: clamp(12px, 2.2vw, 36px);
+  object-fit: contain;
+  object-position: center;
+  filter: brightness(0.82) saturate(0.88);
   transition: filter 240ms ease, transform 420ms ease;
 }
 
@@ -771,7 +781,8 @@ a,
 
   .giant-product {
     top: 58%;
-    width: 110vw;
+    width: 96vw;
+    max-height: 94%;
   }
 
   .object-section {
