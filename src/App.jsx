@@ -99,8 +99,17 @@ const OBJECTS = {
   },
 };
 
+const PAGES = {
+  studio: { code: "000", navLabel: "OUR STUDIO" },
+  eyewear: OBJECTS.eyewear,
+  lighter: OBJECTS.lighter,
+};
+
 function objectFromLocation() {
-  return new URLSearchParams(window.location.search).get("object") === "002" ? "lighter" : "eyewear";
+  const code = new URLSearchParams(window.location.search).get("object");
+  if (code === "000") return "studio";
+  if (code === "002") return "lighter";
+  return "eyewear";
 }
 
 function ProductImage({ objectKey, color, className = "", alt, loading = "lazy" }) {
@@ -145,7 +154,7 @@ function ColorwayControl({ colorways, active, onChange, compact = false }) {
 function ObjectSwitcher({ activeObject, onChange, mobile = false }) {
   return (
     <div className={`object-switcher ${mobile ? "is-mobile" : ""}`} aria-label="Choose object">
-      {Object.entries(OBJECTS).map(([key, item]) => (
+      {Object.entries(PAGES).map(([key, item]) => (
         <button
           key={key}
           type="button"
@@ -183,8 +192,55 @@ function ObjectIndex({ activeObject, onChange }) {
           <span className="index-copy"><small>OBJECT 002</small><strong>CLIPPER SLEEVE</strong></span>
           <ArrowRight size={22} weight="light" />
         </button>
+        <button
+          type="button"
+          className={`object-index-card studio-index ${activeObject === "studio" ? "is-active" : ""}`}
+          onClick={() => onChange("studio")}
+        >
+          <img src={asset("studio-office-v1.png")} alt="DFRBS Studio workspace" />
+          <span className="index-copy"><small>OBJECT 000</small><strong>OUR STUDIO</strong></span>
+          <ArrowRight size={22} weight="light" />
+        </button>
       </div>
     </section>
+  );
+}
+
+function StudioPage({ activeObject, onChange }) {
+  const disciplines = ["MUSIC", "PERFORMANCE", "ENTERTAINMENT", "MANUFACTURING", "ART", "FASHION", "AI"];
+
+  return (
+    <>
+      <section id="top" className="studio-hero" aria-labelledby="studio-title">
+        <img src={asset("studio-office-v1.png")} alt="DFRBS Studio team working in the black and hot-pink production studio" />
+        <div className="studio-hero-shade" aria-hidden="true" />
+        <div className="studio-hero-copy">
+          <h1 id="studio-title"><span>OUR</span><span>STUDIO</span></h1>
+          <p>2026—2040 / RIGHT NOW</p>
+        </div>
+      </section>
+
+      <section id="about" className="studio-manifesto" aria-labelledby="manifesto-title">
+        <span className="eyebrow">DFRBS STUDIO IS</span>
+        <h2 id="manifesto-title">HERE TO REALIZE THE FULL POTENTIAL<br />OF 2026–2040 — <em>RIGHT NOW.</em></h2>
+        <div className="manifesto-grid">
+          <p>THE NEWEST. THE RAREST.<br />THE QUEEREST.<br />THE MOST CURRENT.</p>
+          <p>AT THE CUTTING EDGE OF MUSIC,<br />PERFORMANCE, ENTERTAINMENT,<br />MANUFACTURING, ART, FASHION AND AI.</p>
+          <p>A SHARP STUDIO<br />CAPABLE OF EVERYTHING.</p>
+        </div>
+      </section>
+
+      <section id="campaign" className="studio-boardroom" aria-label="DFRBS Studio creative production meeting">
+        <img src={asset("studio-boardroom-v1.png")} alt="Alien-forward DFRBS Studio team in a creative production meeting" />
+      </section>
+
+      <section className="studio-disciplines" aria-labelledby="disciplines-title">
+        <span id="disciplines-title" className="eyebrow">DISCIPLINES</span>
+        <div>{disciplines.map((item, index) => <span key={item}>{item}{index < disciplines.length - 1 && <i>/</i>}</span>)}</div>
+      </section>
+
+      <ObjectIndex activeObject={activeObject} onChange={onChange} />
+    </>
   );
 }
 
@@ -197,10 +253,11 @@ export function App() {
   const [added, setAdded] = useState(false);
   const [filmMuted, setFilmMuted] = useState(true);
 
-  const object = OBJECTS[activeObject];
-  const activeColor = activeColors[activeObject];
-  const selected = useMemo(() => object.colorways[activeColor], [object, activeColor]);
-  const isRequest = object.price === "PRICE ON REQUEST";
+  const isStudio = activeObject === "studio";
+  const object = isStudio ? null : OBJECTS[activeObject];
+  const activeColor = isStudio ? "studio" : activeColors[activeObject];
+  const selected = useMemo(() => object?.colorways[activeColor] || null, [object, activeColor]);
+  const isRequest = object?.price === "PRICE ON REQUEST";
 
   useEffect(() => {
     const handlePopState = () => setActiveObject(objectFromLocation());
@@ -210,11 +267,11 @@ export function App() {
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen || mobileNavOpen ? "hidden" : "";
-    document.title = `${object.title} — DFRBS STUDIO`;
+    document.title = isStudio ? "OUR STUDIO — DFRBS STUDIO" : `${object.title} — DFRBS STUDIO`;
     return () => {
       document.body.style.overflow = "";
     };
-  }, [drawerOpen, mobileNavOpen, object.title]);
+  }, [drawerOpen, mobileNavOpen, isStudio, object?.title]);
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -227,7 +284,8 @@ export function App() {
       return;
     }
     const url = new URL(window.location.href);
-    if (nextObject === "lighter") url.searchParams.set("object", "002");
+    if (nextObject === "studio") url.searchParams.set("object", "000");
+    else if (nextObject === "lighter") url.searchParams.set("object", "002");
     else url.searchParams.delete("object");
     window.history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
     setActiveObject(nextObject);
@@ -261,7 +319,7 @@ export function App() {
           <button type="button" onClick={() => scrollTo("about")}>ABOUT</button>
         </nav>
 
-        <button className="bag-button" type="button" onClick={() => setDrawerOpen(true)} aria-label={`Open bag, ${bagCount} ${bagCount === 1 ? "item" : "items"}`}>
+        <button className="bag-button" type="button" onClick={() => !isStudio && setDrawerOpen(true)} aria-label={`Open bag, ${bagCount} ${bagCount === 1 ? "item" : "items"}`}>
           <Bag size={24} weight="light" />
           {bagCount > 0 && <span>{bagCount}</span>}
         </button>
@@ -272,6 +330,8 @@ export function App() {
 
         <ObjectSwitcher activeObject={activeObject} onChange={changeObject} />
       </header>
+
+      {isStudio ? <StudioPage activeObject={activeObject} onChange={changeObject} /> : <>
 
       <section id="top" className="hero" aria-labelledby="hero-title">
         <img className="hero-image" src={object.hero} alt={object.heroAlt} />
@@ -396,12 +456,13 @@ export function App() {
       </section>
 
       <ObjectIndex activeObject={activeObject} onChange={changeObject} />
+      </>}
 
       <footer className="footer">
         <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
         <nav aria-label="Footer navigation">
           <button type="button" onClick={() => scrollTo("top")}>STUDIO</button>
-          <button type="button" onClick={() => scrollTo("object")}>MATERIALS</button>
+          <button type="button" onClick={() => scrollTo(isStudio ? "campaign" : "object")}>{isStudio ? "WORK" : "MATERIALS"}</button>
           <button type="button" onClick={() => scrollTo("about")}>CARE</button>
           <a href="mailto:studio@dfrbs.com">CONTACT</a>
         </nav>
@@ -422,7 +483,7 @@ export function App() {
         </div>
       )}
 
-      {drawerOpen && (
+      {drawerOpen && object && selected && (
         <div className="drawer-layer" role="presentation" onMouseDown={(event) => {
           if (event.target === event.currentTarget) setDrawerOpen(false);
         }}>

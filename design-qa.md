@@ -1,61 +1,28 @@
-# DFRBS Studio — OBJECT 002 Design QA
+# DFRBS Studio — OUR STUDIO Design QA
 
 ## Evidence
 
-- Source visual truth: `reference/approved-object-002-mockup.png`
-- Browser-rendered desktop implementation: `qa/implementation-object-002-desktop.jpg`
-- Full-view combined comparison: `qa/comparison-object-002-full.jpg`
-- Focused hero comparison: `qa/comparison-object-002-hero.jpg`
-- Responsive evidence: `qa/implementation-object-002-mobile-hero.jpg`
-- Source pixels: 864 × 1821.
-- Implementation capture: four browser-rendered 1348 × 926 JPEG viewports stitched into 1348 × 3704.
-- Browser CSS viewport: 1363 × 936 at device pixel ratio 1.
-- Responsive QA surface: actual app iframe width 375 CSS px inside a 390 × 844 test surface; body `scrollWidth` remained 375 px.
-- State: OBJECT 002, HEAT selected, bag empty, desktop and responsive layouts.
-- Density normalization: source and stitched implementation were each resized to 2048 px high before horizontal comparison.
+- Approved source: `reference/approved-our-studio-mockup.png` (885 × 1777).
+- Same-frame hero comparison: `reference/our-studio-design-comparison.png`.
+- Browser render verified at `http://terminal.local:4173/dfrbs-studio-object-001/?object=000`.
+- Desktop viewport: 1347 × 893 browser capture.
+- Mobile viewport: actual app rendered at 390 × 844 CSS px in a browser QA frame.
 
 ## Findings
 
 - No actionable P0, P1, or P2 differences remain.
-- Fonts and typography: Bebas Neue reproduces the condensed editorial display hierarchy; IBM Plex Mono matches the source's technical labels and compact copy. The desktop hero type is marginally larger than the generated mockup, but intentionally preserves the established OBJECT 001 site scale and remains legible without clipping.
-- Spacing and layout rhythm: hero, campaign, product facts, three-color collection, object index, and footer preserve the source order and black editorial rhythm. Desktop sections align to the existing site gutters; mobile collapses to one column without horizontal overflow.
-- Colors and visual tokens: the black/charcoal/chrome palette and hot-pink active rules match the source. PEARL and HEAT color are confined to product imagery and selected states.
-- Image quality and asset fidelity: all visible hero, campaign, product, colorway, and index imagery uses the supplied/generated DFRBS assets. No placeholders, CSS drawings, generic product substitutions, broken images, white cutout borders, or missing product anatomy were found.
-- Copy and content: OBJECT 002 labels, Clipper sleeve copy, facts, color names, object switcher, and OBJECT INDEX match the approved structure. The final user-supplied product copy is `3D PRINTED LIGHTER CASE.` with a `$420` price.
-- Accessibility and affordances: color controls expose radio state and explicit accessible labels; product and navigation buttons expose current state; focus styles remain visible. Mobile menu, object switching, color switching, Shop drawer, request state, browser history URL state, and bag counter were exercised.
-- Campaign film: the supplied 512 × 910 portrait H.264 film is integrated only into OBJECT 001, uses a compressed fast-start MP4 plus poster, begins muted, loops inline, and exposes a working accessible SOUND OFF / SOUND ON control. Desktop and 360px mobile layouts have no horizontal overflow.
-
-## Comparison History
-
-### Pass 1
-
-- P2: the initial mobile hero used the landscape crop and showed PEARL plus only a partial HEAT product.
-- Fix: added a purpose-built portrait mobile hero composition using the same three-lighter mirror image, preserving all three products without changing product geometry.
-- Post-fix evidence: the 375 px responsive render shows BLACK, PEARL, and HEAT together, with no horizontal overflow and no broken images.
-
-### Pass 2
-
-- Rechecked the combined desktop comparison, focused hero, product drawer, object index, and responsive layouts.
-- No actionable P0/P1/P2 issues remained.
-
-## Primary Interactions Tested
-
-- 001 EYEWEAR ↔ 002 CLIPPER SLEEVE switching updates the page, title, and `?object=002` URL state.
-- BLACK / PEARL / HEAT selection updates campaign, product, copy, and drawer state.
-- `EXPLORE THE OBJECT` scrolls to the product section.
-- `SHOP NOW` opens the correct OBJECT 002 drawer.
-- `REQUEST AVAILABILITY` transitions to `REQUEST SAVED` and updates the bag count.
-- Mobile navigation opens with both product destinations and closes correctly.
-- Browser console checked: no application-origin errors or warnings; zero broken images.
-
-## Follow-up Polish
-
-- P3: none.
+- Typography: Bebas Neue preserves the tall editorial OUR STUDIO and manifesto hierarchy; IBM Plex Mono handles the technical labels. The implemented hero title was moved upward after the first comparison so its scale and vertical placement now follow the approved mockup.
+- Layout and spacing: page order matches the approved visual—hero, manifesto, boardroom, disciplines, three-card object index, footer. Desktop gutters and section density align with the existing DFRBS product pages.
+- Color and imagery: black, chrome and saturated hot pink remain dominant. The hero and boardroom use the approved DFRBS Studio campaign images with no placeholders or CSS-drawn substitutes.
+- Copy: all approved 2026–2040 language is present, including newest, rarest, queerest, current, the seven disciplines, and the studio's ability to do everything.
+- Responsiveness: the 390 px layout preserves the hero hierarchy without overlap; navigation collapses into the existing full-screen menu; sections stack without horizontal overflow.
+- Accessibility: semantic headings and labeled regions are present; navigation and index items are buttons; current-page state is exposed; focus indicators and reduced-motion handling remain intact.
+- Interactions: desktop ABOUT and OBJECTS scrolling, mobile menu open/close, and 000 → 001 page switching were exercised successfully. URL state updates through `?object=000` while existing 001 and 002 routes remain intact.
+- Console: no application-origin warnings or errors in a fresh browser tab. One Chrome-extension metadata error is external to the app.
 
 ## Build Verification
 
 - Vite production build: passed.
-- Sites packaging preparation: passed.
 - Sites worker tests: 4 passed, 0 failed.
 - `git diff --check`: passed.
 

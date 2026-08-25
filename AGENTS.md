@@ -22,3 +22,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - OBJECT 002 is priced at `$420`. Its product description is `3D PRINTED LIGHTER CASE.` and its drawer uses the standard `ADD TO BAG` purchase state.
 - Preserve the lighter anatomy in every asset: ignition assembly at the top, open base at the bottom, organic PETG frame, and exactly four convex front pods.
 - OBJECT 001 includes the user-supplied 30-second portrait campaign film at `public/assets/object-001-campaign-film.mp4`. Keep it autoplaying muted, looping, inline on mobile, and paired with the functional SOUND toggle and poster asset.
+- The approved studio page is `reference/approved-our-studio-mockup.png`. It is page `000 / OUR STUDIO`, available at `?object=000`, and must appear before 001 and 002 in the persistent page switcher.
+- Preserve the studio page's black/chrome/hot-pink editorial system: full-bleed production-office hero, oversized two-line OUR STUDIO title, 2026–2040 manifesto, boardroom image, disciplines line, and three-card OBJECT INDEX.
