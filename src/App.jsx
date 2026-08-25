@@ -136,7 +136,7 @@ export function App() {
       </header>
 
       <section id="top" className="hero" aria-labelledby="hero-title">
-        <img className="hero-image" src=asset("campaign-mirror-black.jpg") alt="Model wearing black Object 001 eyewear beside a chrome mirror" />
+        <img className="hero-image" src={asset("campaign-mirror-black.jpg")} alt="Model wearing black Object 001 eyewear beside a chrome mirror" />
         <div className="hero-shade" aria-hidden="true" />
         <div className="hero-content">
           <span className="eyebrow">LIQUID MONOLITH</span>
