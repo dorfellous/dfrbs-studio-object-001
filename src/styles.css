@@ -605,6 +605,22 @@ a,
   margin-top: 22px;
 }
 
+.drawer-description {
+  display: grid;
+  gap: 8px;
+}
+
+.drawer-description strong {
+  color: #f3f3ef;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+}
+
+.drawer-description span {
+  color: #a9a9a5;
+}
+
 .colorway-control.is-compact,
 .colorway-control.is-compact .colorway-options {
   width: 100%;
@@ -616,6 +632,7 @@ a,
 
 .availability {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 18px;
   margin-top: 34px;
@@ -623,6 +640,14 @@ a,
   border-top: 1px solid var(--hairline);
   color: #999;
   font-size: 10px;
+}
+
+.product-price {
+  color: #f3f3ef;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: 28px;
+  line-height: 0.9;
+  letter-spacing: 0.03em;
 }
 
 .add-button {

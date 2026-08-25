@@ -248,10 +248,13 @@ export function App() {
               <ProductImage color={activeColor} />
             </div>
             <ColorwayControl active={activeColor} onChange={chooseColor} compact />
-            <p>{selected.description}</p>
+            <p className="drawer-description">
+              <strong>3D-PRINTED 4-LENS ORGANIC EYEWEAR.</strong>
+              <span>{selected.description}</span>
+            </p>
             <div className="availability">
               <span>LIMITED RELEASE</span>
-              <span>PRICE ON REQUEST</span>
+              <span className="product-price">$1,500</span>
             </div>
             <button className={`add-button ${added ? "is-added" : ""}`} type="button" onClick={addToBag}>
               {added ? <><CheckCircle size={20} weight="fill" /> ADDED TO BAG</> : <>ADD TO BAG <ArrowRight size={19} /></>}
