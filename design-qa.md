@@ -21,7 +21,7 @@
 - Spacing and layout rhythm: hero, campaign, product facts, three-color collection, object index, and footer preserve the source order and black editorial rhythm. Desktop sections align to the existing site gutters; mobile collapses to one column without horizontal overflow.
 - Colors and visual tokens: the black/charcoal/chrome palette and hot-pink active rules match the source. PEARL and HEAT color are confined to product imagery and selected states.
 - Image quality and asset fidelity: all visible hero, campaign, product, colorway, and index imagery uses the supplied/generated DFRBS assets. No placeholders, CSS drawings, generic product substitutions, broken images, white cutout borders, or missing product anatomy were found.
-- Copy and content: OBJECT 002 labels, Clipper sleeve copy, facts, color names, object switcher, and OBJECT INDEX match the approved structure. Because no lighter price was supplied, `PRICE ON REQUEST` is used instead of an invented number.
+- Copy and content: OBJECT 002 labels, Clipper sleeve copy, facts, color names, object switcher, and OBJECT INDEX match the approved structure. The final user-supplied product copy is `3D PRINTED LIGHTER CASE.` with a `$420` price.
 - Accessibility and affordances: color controls expose radio state and explicit accessible labels; product and navigation buttons expose current state; focus styles remain visible. Mobile menu, object switching, color switching, Shop drawer, request state, browser history URL state, and bag counter were exercised.
 
 ## Comparison History
@@ -49,7 +49,7 @@
 
 ## Follow-up Polish
 
-- P3: supply a final retail price for OBJECT 002 when available so the drawer can replace `PRICE ON REQUEST`.
+- P3: none.
 
 ## Build Verification
 

@@ -91,8 +91,8 @@ const OBJECTS = {
     subintro: "A POCKET-SCALE EXPERIMENT IN FORM, GRIP AND COLOR.",
     mutation: "HOLD THE\nMUTATION",
     story: "OBJECT 002 — A BIOMORPHIC CLIPPER SLEEVE\nFOR OBJECTS THAT MOVE WITH YOU.",
-    productType: "3D-PRINTED ORGANIC CLIPPER SLEEVE.",
-    price: "PRICE ON REQUEST",
+    productType: "3D PRINTED LIGHTER CASE.",
+    price: "$420",
     colorways: LIGHTER_COLORWAYS,
   },
 };
@@ -197,6 +197,7 @@ export function App() {
   const object = OBJECTS[activeObject];
   const activeColor = activeColors[activeObject];
   const selected = useMemo(() => object.colorways[activeColor], [object, activeColor]);
+  const isRequest = object.price === "PRICE ON REQUEST";
 
   useEffect(() => {
     const handlePopState = () => setActiveObject(objectFromLocation());
@@ -409,10 +410,10 @@ export function App() {
             </p>
             <div className="availability">
               <span>LIMITED RELEASE</span>
-              <span className={`product-price ${activeObject === "lighter" ? "is-request" : ""}`}>{object.price}</span>
+              <span className={`product-price ${isRequest ? "is-request" : ""}`}>{object.price}</span>
             </div>
             <button className={`add-button ${added ? "is-added" : ""}`} type="button" onClick={addToBag}>
-              {added ? <><CheckCircle size={20} weight="fill" /> {activeObject === "lighter" ? "REQUEST SAVED" : "ADDED TO BAG"}</> : <>{activeObject === "lighter" ? "REQUEST AVAILABILITY" : "ADD TO BAG"} <ArrowRight size={19} /></>}
+              {added ? <><CheckCircle size={20} weight="fill" /> {isRequest ? "REQUEST SAVED" : "ADDED TO BAG"}</> : <>{isRequest ? "REQUEST AVAILABILITY" : "ADD TO BAG"} <ArrowRight size={19} /></>}
             </button>
           </aside>
         </div>
