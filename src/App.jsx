@@ -34,7 +34,7 @@ const COLORWAYS = {
   heat: {
     label: "HEAT",
     number: "03",
-    product: asset("product-heat-cutout.webp"),
+    product: asset("product-heat-cutout.png"),
     fallback: asset("product-heat-white.jpg"),
     card: asset("product-heat-white.jpg"),
     campaign: asset("campaign-heat.jpg"),

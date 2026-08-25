@@ -318,7 +318,7 @@ a,
   z-index: 2;
   left: 50%;
   top: 56%;
-  width: min(118vw, 1760px);
+  width: min(96vw, 1440px);
   max-width: none;
   transform: translate(-50%, -50%);
   object-fit: contain;
@@ -770,8 +770,8 @@ a,
   }
 
   .giant-product {
-    top: 62%;
-    width: 150vw;
+    top: 58%;
+    width: 110vw;
   }
 
   .object-section {
