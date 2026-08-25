@@ -10,32 +10,34 @@ import {
   X,
 } from "@phosphor-icons/react";
 
+const asset = (filename) => `${import.meta.env.BASE_URL}assets/${filename}`;
+
 const COLORWAYS = {
   black: {
     label: "BLACK",
     number: "01",
-    product: "/assets/product-black-cutout.png",
-    fallback: "/assets/black-product-original.jpg",
-    card: "/assets/product-black-white.jpg",
-    campaign: "/assets/campaign-mirror-black.jpg",
+    product: asset("product-black-cutout.png"),
+    fallback: asset("black-product-original.jpg"),
+    card: asset("product-black-white.jpg"),
+    campaign: asset("campaign-mirror-black.jpg"),
     description: "Gloss black. Dense, reflective and deliberately severe.",
   },
   pearl: {
     label: "PEARL",
     number: "02",
-    product: "/assets/product-pearl-cutout.png",
-    fallback: "/assets/product-pearl-white.jpg",
-    card: "/assets/product-pearl-white.jpg",
-    campaign: "/assets/campaign-pearl.jpg",
+    product: asset("product-pearl-cutout.png"),
+    fallback: asset("product-pearl-white.jpg"),
+    card: asset("product-pearl-white.jpg"),
+    campaign: asset("campaign-pearl.jpg"),
     description: "A translucent pearl finish that reveals the printed topology.",
   },
   heat: {
     label: "HEAT",
     number: "03",
-    product: "/assets/product-heat-cutout.webp",
-    fallback: "/assets/product-heat-white.jpg",
-    card: "/assets/product-heat-white.jpg",
-    campaign: "/assets/campaign-heat.jpg",
+    product: asset("product-heat-cutout.webp"),
+    fallback: asset("product-heat-white.jpg"),
+    card: asset("product-heat-white.jpg"),
+    campaign: asset("campaign-heat.jpg"),
     description: "Safety orange shifting into saturated hot pink.",
   },
 };
@@ -114,7 +116,7 @@ export function App() {
     <main className={`site color-${activeColor}`}>
       <header className="topbar">
         <button className="brand-button" type="button" onClick={() => scrollTo("top")} aria-label="Back to top">
-          <img src="/assets/wordmark-white.png" alt="DFRBS Studio" />
+          <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
         </button>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -134,7 +136,7 @@ export function App() {
       </header>
 
       <section id="top" className="hero" aria-labelledby="hero-title">
-        <img className="hero-image" src="/assets/campaign-mirror-black.jpg" alt="Model wearing black Object 001 eyewear beside a chrome mirror" />
+        <img className="hero-image" src={asset("campaign-mirror-black.jpg")} alt="Model wearing black Object 001 eyewear beside a chrome mirror" />
         <div className="hero-shade" aria-hidden="true" />
         <div className="hero-content">
           <span className="eyebrow">LIQUID MONOLITH</span>
@@ -208,7 +210,7 @@ export function App() {
       </section>
 
       <footer className="footer">
-        <img src="/assets/wordmark-white.png" alt="DFRBS Studio" />
+        <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
         <nav aria-label="Footer navigation">
           <button type="button" onClick={() => scrollTo("top")}>STUDIO</button>
           <button type="button" onClick={() => scrollTo("object")}>MATERIALS</button>
@@ -223,7 +225,7 @@ export function App() {
           <button className="close-button" type="button" onClick={() => setMobileNavOpen(false)} aria-label="Close menu">
             <X size={28} weight="light" />
           </button>
-          <img src="/assets/wordmark-white.png" alt="DFRBS Studio" />
+          <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
           <nav>
             <button type="button" onClick={() => scrollTo("collection")}>COLLECTION</button>
             <button type="button" onClick={() => scrollTo("campaign")}>CAMPAIGN</button>
