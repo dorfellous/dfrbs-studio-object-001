@@ -16,7 +16,7 @@ const COLORWAYS = {
   black: {
     label: "BLACK",
     number: "01",
-    product: asset("product-black-cutout.png"),
+    product: asset("product-black-cutout-v4.png"),
     fallback: asset("black-product-original.jpg"),
     card: asset("product-black-white.jpg"),
     campaign: asset("campaign-mirror-black.jpg"),
@@ -25,7 +25,7 @@ const COLORWAYS = {
   pearl: {
     label: "PEARL",
     number: "02",
-    product: asset("product-pearl-cutout.png"),
+    product: asset("product-pearl-cutout-v4.png"),
     fallback: asset("product-pearl-white.jpg"),
     card: asset("product-pearl-white.jpg"),
     campaign: asset("campaign-pearl.jpg"),
@@ -34,7 +34,7 @@ const COLORWAYS = {
   heat: {
     label: "HEAT",
     number: "03",
-    product: asset("product-heat-cutout-v2.png"),
+    product: asset("product-heat-cutout-v4.png"),
     fallback: asset("product-heat-white.jpg"),
     card: asset("product-heat-white.jpg"),
     campaign: asset("campaign-heat.jpg"),
