@@ -21,3 +21,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Keep the site scalable through the persistent 001 EYEWEAR / 002 CLIPPER SLEEVE switcher and the bottom OBJECT INDEX. Each object uses a shareable `?object=` URL state while remaining inside the same React site.
 - OBJECT 002 is priced at `$420`. Its product description is `3D PRINTED LIGHTER CASE.` and its drawer uses the standard `ADD TO BAG` purchase state.
 - Preserve the lighter anatomy in every asset: ignition assembly at the top, open base at the bottom, organic PETG frame, and exactly four convex front pods.
+- OBJECT 001 includes the user-supplied 30-second portrait campaign film at `public/assets/object-001-campaign-film.mp4`. Keep it autoplaying muted, looping, inline on mobile, and paired with the functional SOUND toggle and poster asset.

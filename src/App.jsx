@@ -6,6 +6,8 @@ import {
   Cube,
   GlobeHemisphereEast,
   List,
+  SpeakerHigh,
+  SpeakerSlash,
   Stack,
   X,
 } from "@phosphor-icons/react";
@@ -193,6 +195,7 @@ export function App() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [bagCount, setBagCount] = useState(0);
   const [added, setAdded] = useState(false);
+  const [filmMuted, setFilmMuted] = useState(true);
 
   const object = OBJECTS[activeObject];
   const activeColor = activeColors[activeObject];
@@ -287,12 +290,41 @@ export function App() {
       </section>
 
       {activeObject === "eyewear" ? (
-        <section id="campaign" className="campaign-stage" aria-label={`${selected.label} eyewear campaign`}>
-          <div className="campaign-frame">
-            <img src={selected.campaign} alt={`Object 001 ${selected.label.toLowerCase()} campaign`} />
-          </div>
-          <ProductImage objectKey="eyewear" color={activeColor} className="giant-product" loading="eager" />
-        </section>
+        <>
+          <section id="campaign" className="campaign-stage" aria-label={`${selected.label} eyewear campaign`}>
+            <div className="campaign-frame">
+              <img src={selected.campaign} alt={`Object 001 ${selected.label.toLowerCase()} campaign`} />
+            </div>
+            <ProductImage objectKey="eyewear" color={activeColor} className="giant-product" loading="eager" />
+          </section>
+          <section className="eyewear-film" aria-labelledby="film-title">
+            <div className="eyewear-film-copy">
+              <span className="eyebrow accent-copy">CAMPAIGN FILM / 001</span>
+              <h2 id="film-title"><span>FORM</span><span>IN MOTION</span></h2>
+            </div>
+            <div className="eyewear-film-player">
+              <video
+                src={asset("object-001-campaign-film.mp4")}
+                poster={asset("object-001-campaign-film-poster.webp")}
+                autoPlay
+                loop
+                muted={filmMuted}
+                playsInline
+                preload="metadata"
+                aria-label="OBJECT 001 campaign film"
+              />
+              <button className="film-sound" type="button" onClick={() => setFilmMuted((muted) => !muted)} aria-label={filmMuted ? "Turn campaign film sound on" : "Mute campaign film"}>
+                {filmMuted ? <SpeakerSlash size={18} weight="light" /> : <SpeakerHigh size={18} weight="light" />}
+                <span>{filmMuted ? "SOUND OFF" : "SOUND ON"}</span>
+              </button>
+            </div>
+            <div className="eyewear-film-meta">
+              <span>OBJECT 001</span>
+              <p>WORN AS A SECOND SURFACE.<br />A STUDY IN FORM, BODY AND REFLECTION.</p>
+              <small>00:30 / CAMPAIGN 2026</small>
+            </div>
+          </section>
+        </>
       ) : (
         <section id="campaign" className="lighter-campaign" aria-label={`${selected.label} Clipper sleeve campaign`}>
           <div className="lighter-campaign-copy">

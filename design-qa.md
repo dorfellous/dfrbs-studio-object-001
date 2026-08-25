@@ -23,6 +23,7 @@
 - Image quality and asset fidelity: all visible hero, campaign, product, colorway, and index imagery uses the supplied/generated DFRBS assets. No placeholders, CSS drawings, generic product substitutions, broken images, white cutout borders, or missing product anatomy were found.
 - Copy and content: OBJECT 002 labels, Clipper sleeve copy, facts, color names, object switcher, and OBJECT INDEX match the approved structure. The final user-supplied product copy is `3D PRINTED LIGHTER CASE.` with a `$420` price.
 - Accessibility and affordances: color controls expose radio state and explicit accessible labels; product and navigation buttons expose current state; focus styles remain visible. Mobile menu, object switching, color switching, Shop drawer, request state, browser history URL state, and bag counter were exercised.
+- Campaign film: the supplied 512 × 910 portrait H.264 film is integrated only into OBJECT 001, uses a compressed fast-start MP4 plus poster, begins muted, loops inline, and exposes a working accessible SOUND OFF / SOUND ON control. Desktop and 360px mobile layouts have no horizontal overflow.
 
 ## Comparison History
 
