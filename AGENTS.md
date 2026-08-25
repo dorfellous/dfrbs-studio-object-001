@@ -14,5 +14,6 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Keep the page predominantly black, charcoal, smoky gray, and chrome. Orange-to-pink belongs on the HEAT eyewear and small active-state accents only; never reintroduce a large colored background.
 - Preserve the exact eyewear silhouette from the supplied product photos, especially the narrow organic central nose bridge. Never stretch or redraw the eyewear to fill a slot.
 - Product cutouts must have transparent openings and clean, matte-free edges on black. Keep the oversized campaign product fully legible instead of cropping the silhouette aggressively.
+- The approved eyewear anatomy has exactly four strongly convex bubble lenses, two on each side. Every colorway must preserve the same lens volume, organic frame openings, asymmetry, and narrow bridge.
 - Use the supplied DFRBS campaign imagery and wordmark; do not substitute generic fashion assets.
 - The repository must stay GitHub-ready: relative asset paths, a clean README, a production build, and no secrets or machine-specific paths.
