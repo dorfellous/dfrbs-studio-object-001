@@ -1,6 +1,6 @@
 # DFRBS Studio — Design QA
 
-Final result: **PASS**
+Final result: passed
 
 ## Visual target
 
@@ -10,6 +10,9 @@ Final result: **PASS**
 - Normalized comparisons:
   - `qa/comparison-hero.jpg`
   - `qa/comparison-object.jpg`
+- Live implementation capture: `https://dorfellous.github.io/dfrbs-studio-object-001/#campaign` (cloud-browser viewport capture, 1363 × 936 CSS px, device scale 1)
+- Source pixels: `reference/selected-mockup.jpg`; implementation pixels/CSS size: 1363 × 936; no density normalization was required for the live browser capture.
+- State: desktop, HEAT selected, campaign section aligned to the top of the viewport.
 
 ## Iteration history
 
@@ -28,14 +31,23 @@ Final result: **PASS**
 
 No open P0 or P1 issues.
 
+### Pass 3 — cutout correction
+
+- **P1 — All transparent product assets showed a light matte fringe on black.** Rebuilt the BLACK, PEARL, and HEAT alpha edges and removed white background remnants from the HEAT frame openings.
+- **P1 — The oversized HEAT asset was initially published only partially.** Re-uploaded the complete lossless PNG, verified the deployed byte size (1,347,663 bytes), and moved the corrected image to a versioned URL to invalidate the stale browser cache.
+- **P2 — The campaign product crop was too aggressive.** Reduced the desktop width from 118vw to 96vw and mobile width from 150vw to 110vw while preserving the product silhouette and editorial overlap.
+- Post-fix evidence: the live browser capture at `#campaign` shows the complete HEAT product, transparent openings, no white matte, and left/right breathing room inside the 1363 px viewport.
+- Focused region evidence was the campaign product itself; no additional crop was needed because the eyewear occupies most of the captured viewport and its full edge is readable.
+
 ## Functional verification
 
 - BLACK / PEARL / HEAT controls update the campaign and product state.
+- Deployed cutout dimensions loaded successfully: BLACK 1446 px, PEARL 1265 px, HEAT 1920 px.
 - Campaign CTA scrolls to the product section.
 - Product drawer opens and closes.
 - Adding a product updates the local bag count and button state.
 - Mobile menu opens, exposes all navigation items, and closes.
-- No application-origin console errors were recorded in the cloud-browser session.
+- No application-origin console errors were recorded in the cloud-browser session; extension-only metadata errors were excluded.
 
 ## Build verification
 
