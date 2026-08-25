@@ -1,65 +1,61 @@
-# DFRBS Studio — Design QA
+# DFRBS Studio — OBJECT 002 Design QA
 
-Final result: passed
+## Evidence
 
-## Visual target
+- Source visual truth: `reference/approved-object-002-mockup.png`
+- Browser-rendered desktop implementation: `qa/implementation-object-002-desktop.jpg`
+- Full-view combined comparison: `qa/comparison-object-002-full.jpg`
+- Focused hero comparison: `qa/comparison-object-002-hero.jpg`
+- Responsive evidence: `qa/implementation-object-002-mobile-hero.jpg`
+- Source pixels: 864 × 1821.
+- Implementation capture: four browser-rendered 1348 × 926 JPEG viewports stitched into 1348 × 3704.
+- Browser CSS viewport: 1363 × 936 at device pixel ratio 1.
+- Responsive QA surface: actual app iframe width 375 CSS px inside a 390 × 844 test surface; body `scrollWidth` remained 375 px.
+- State: OBJECT 002, HEAT selected, bag empty, desktop and responsive layouts.
+- Density normalization: source and stitched implementation were each resized to 2048 px high before horizontal comparison.
 
-- Reference: `reference/selected-mockup.jpg`
-- Desktop verification viewport: 1348 × 926
-- Mobile verification viewport: 390 × 844 (rendered in a same-origin QA frame)
-- Normalized comparisons:
-  - `qa/comparison-hero.jpg`
-  - `qa/comparison-object.jpg`
-- Live implementation capture: `https://dorfellous.github.io/dfrbs-studio-object-001/#campaign` (cloud-browser viewport capture, 1363 × 936 CSS px, device scale 1)
-- Source pixels: `reference/selected-mockup.jpg`; implementation pixels/CSS size: 1363 × 936; no density normalization was required for the live browser capture.
-- State: desktop, HEAT selected, campaign section aligned to the top of the viewport.
+## Findings
 
-## Iteration history
+- No actionable P0, P1, or P2 differences remain.
+- Fonts and typography: Bebas Neue reproduces the condensed editorial display hierarchy; IBM Plex Mono matches the source's technical labels and compact copy. The desktop hero type is marginally larger than the generated mockup, but intentionally preserves the established OBJECT 001 site scale and remains legible without clipping.
+- Spacing and layout rhythm: hero, campaign, product facts, three-color collection, object index, and footer preserve the source order and black editorial rhythm. Desktop sections align to the existing site gutters; mobile collapses to one column without horizontal overflow.
+- Colors and visual tokens: the black/charcoal/chrome palette and hot-pink active rules match the source. PEARL and HEAT color are confined to product imagery and selected states.
+- Image quality and asset fidelity: all visible hero, campaign, product, colorway, and index imagery uses the supplied/generated DFRBS assets. No placeholders, CSS drawings, generic product substitutions, broken images, white cutout borders, or missing product anatomy were found.
+- Copy and content: OBJECT 002 labels, Clipper sleeve copy, facts, color names, object switcher, and OBJECT INDEX match the approved structure. Because no lighter price was supplied, `PRICE ON REQUEST` is used instead of an invented number.
+- Accessibility and affordances: color controls expose radio state and explicit accessible labels; product and navigation buttons expose current state; focus styles remain visible. Mobile menu, object switching, color switching, Shop drawer, request state, browser history URL state, and bag counter were exercised.
+
+## Comparison History
 
 ### Pass 1
 
-- **P1 — HEAT cutout showed a checkerboard/white-background artifact.** Rebuilt the cutout from the supplied product photograph, removed the connected background and shadow fringe, and upscaled the transparent asset for the oversized campaign treatment.
-- **P1 — Product geometry could drift from the selected visual.** Replaced generated-looking product geometry with source-derived product imagery. The large black product uses the original supplied photograph, preserving the narrow organic nose bridge.
-- **P2 — First browser capture used the fallback heading font.** Waited for the bundled Bebas Neue font to finish loading before final capture.
+- P2: the initial mobile hero used the landscape crop and showed PEARL plus only a partial HEAT product.
+- Fix: added a purpose-built portrait mobile hero composition using the same three-lighter mirror image, preserving all three products without changing product geometry.
+- Post-fix evidence: the 375 px responsive render shows BLACK, PEARL, and HEAT together, with no horizontal overflow and no broken images.
 
 ### Pass 2
 
-- Compared the normalized hero and object views side by side with the selected mockup.
-- Confirmed the black, pearl, and heat states maintain the same dark editorial system and keep strong color limited to the product.
-- Confirmed no product cutout background, broken crop, overflow, or unreadable text remained at the tested states.
-- Confirmed the deliberate geometry correction: the source-accurate black product differs from the more symmetrical mockup rendering in order to preserve the real nose bridge.
+- Rechecked the combined desktop comparison, focused hero, product drawer, object index, and responsive layouts.
+- No actionable P0/P1/P2 issues remained.
 
-No open P0 or P1 issues.
+## Primary Interactions Tested
 
-### Pass 3 — cutout correction
+- 001 EYEWEAR ↔ 002 CLIPPER SLEEVE switching updates the page, title, and `?object=002` URL state.
+- BLACK / PEARL / HEAT selection updates campaign, product, copy, and drawer state.
+- `EXPLORE THE OBJECT` scrolls to the product section.
+- `SHOP NOW` opens the correct OBJECT 002 drawer.
+- `REQUEST AVAILABILITY` transitions to `REQUEST SAVED` and updates the bag count.
+- Mobile navigation opens with both product destinations and closes correctly.
+- Browser console checked: no application-origin errors or warnings; zero broken images.
 
-- **P1 — All transparent product assets showed a light matte fringe on black.** Rebuilt the BLACK, PEARL, and HEAT alpha edges and removed white background remnants from the HEAT frame openings.
-- **P1 — The oversized HEAT asset was initially published only partially.** Re-uploaded the complete lossless PNG, verified the deployed byte size (1,347,663 bytes), and moved the corrected image to a versioned URL to invalidate the stale browser cache.
-- **P2 — The campaign product crop was too aggressive.** Reduced the desktop width from 118vw to 96vw and mobile width from 150vw to 110vw while preserving the product silhouette and editorial overlap.
-- Post-fix evidence: the live browser capture at `#campaign` shows the complete HEAT product, transparent openings, no white matte, and left/right breathing room inside the 1363 px viewport.
-- Focused region evidence was the campaign product itself; no additional crop was needed because the eyewear occupies most of the captured viewport and its full edge is readable.
+## Follow-up Polish
 
-### Pass 4 — four-lens production assets
+- P3: supply a final retail price for OBJECT 002 when available so the drawer can replace `PRICE ON REQUEST`.
 
-- Replaced every product display with new BLACK, PEARL, and HEAT RGBA PNGs built from the same source-accurate product geometry.
-- Confirmed all three assets preserve four strongly convex lenses — upper and lower on each eye — plus the narrow nose bridge, perforations, and both temples.
-- Normalized all colorways to a shared 1600 × 1200 transparent canvas so switching color does not change scale or alignment.
-- Decontaminated the outer alpha band from the object interior and removed the final white/gray matte from partially transparent edge pixels.
-- Reduced the oversized campaign product to 92vw on desktop and 96vw on mobile; the full silhouette remains visible with breathing room at both sides.
-- Replaced the white collection photographs with the new transparent product assets on dark tonal card backgrounds.
-- Browser verification at the campaign, object, and collection sections confirmed complete silhouettes, transparent openings, clean edges, and consistent BLACK / PEARL / HEAT presentation.
+## Build Verification
 
-## Functional verification
+- Vite production build: passed.
+- Sites packaging preparation: passed.
+- Sites worker tests: 4 passed, 0 failed.
+- `git diff --check`: passed.
 
-- BLACK / PEARL / HEAT controls update the campaign and product state.
-- Product cutout dimensions loaded successfully: BLACK, PEARL, and HEAT are all 1600 × 1200 px.
-- Campaign CTA scrolls to the product section.
-- Product drawer opens and closes.
-- Adding a product updates the local bag count and button state.
-- Mobile menu opens, exposes all navigation items, and closes.
-- No application-origin console errors were recorded in the cloud-browser session; extension-only metadata errors were excluded.
-
-## Build verification
-
-- `npm run build` — passed
-- `node --test tests/sites-worker.test.mjs` — 4/4 passed
+final result: passed

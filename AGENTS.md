@@ -17,3 +17,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Product cutouts must use genuine transparent PNGs with transparent openings and decontaminated, matte-free edges on black. Keep all three colorways on the shared 1600 × 1200 canvas and keep the oversized campaign product fully legible instead of cropping the silhouette aggressively.
 - Use the supplied DFRBS campaign imagery and wordmark; do not substitute generic fashion assets.
 - The repository must stay GitHub-ready: relative asset paths, a clean README, a production build, and no secrets or machine-specific paths.
+- The approved second product page is `reference/approved-object-002-mockup.png`. OBJECT 002 is a removable 3D-printed organic Clipper lighter sleeve with BLACK, PEARL, and HEAT colorways.
+- Keep the site scalable through the persistent 001 EYEWEAR / 002 CLIPPER SLEEVE switcher and the bottom OBJECT INDEX. Each object uses a shareable `?object=` URL state while remaining inside the same React site.
+- Do not invent an OBJECT 002 price. Until the user supplies one, the product drawer must show `PRICE ON REQUEST` and `REQUEST AVAILABILITY`.
+- Preserve the lighter anatomy in every asset: ignition assembly at the top, open base at the bottom, organic PETG frame, and exactly four convex front pods.
