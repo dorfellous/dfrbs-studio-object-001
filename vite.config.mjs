@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+  base: "/dfrbs-studio-object-001/",
   build: {
     outDir: "dist/client",
   },
