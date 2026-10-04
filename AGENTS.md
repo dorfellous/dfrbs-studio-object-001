@@ -10,6 +10,8 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## DFRBS prototype decisions
 
+- The collaborator approved an immersive campaign upgrade on October 5, 2026: preserve sculptural products, supplied photography and BLACK / PEARL / HEAT while strengthening product presentation, typography, purposeful motion and mobile navigation. Extend the existing visual identity; keep the studio's approved composition.
+
 - The approved visual target is `reference/selected-mockup.png`.
 - Keep the page predominantly black, charcoal, smoky gray, and chrome. Orange-to-pink belongs on the HEAT eyewear and small active-state accents only; never reintroduce a large colored background.
 - Preserve the exact eyewear silhouette from the supplied product photos, especially the narrow organic central nose bridge. Never stretch or redraw the eyewear to fill a slot.

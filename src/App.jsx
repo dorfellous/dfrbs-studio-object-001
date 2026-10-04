@@ -1,11 +1,15 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useDialogAccessibility } from "./useDialogAccessibility.js";
 import {
   ArrowRight,
+  ArrowDown,
   Bag,
   CheckCircle,
   Cube,
   GlobeHemisphereEast,
   List,
+  Pause,
+  Play,
   SpeakerHigh,
   SpeakerSlash,
   Stack,
@@ -160,10 +164,23 @@ function ProductImage({ objectKey, color, className = "", alt, loading = "lazy" 
 }
 
 function ColorwayControl({ colorways, active, onChange, compact = false }) {
+  const keys = Object.keys(colorways);
+  const handleKeyDown = (event) => {
+    const index = keys.indexOf(active);
+    let next;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") next = keys[(index + 1) % keys.length];
+    else if (event.key === "ArrowLeft" || event.key === "ArrowUp") next = keys[(index - 1 + keys.length) % keys.length];
+    else if (event.key === "Home") next = keys[0];
+    else if (event.key === "End") next = keys[keys.length - 1];
+    if (!next) return;
+    event.preventDefault();
+    onChange(next);
+    event.currentTarget.querySelector(`[data-color="${next}"]`)?.focus();
+  };
   return (
     <div className={`colorway-control ${compact ? "is-compact" : ""}`}>
       {!compact && <span className="eyebrow">CHOOSE COLORWAY</span>}
-      <div className="colorway-options" role="radiogroup" aria-label="Choose colorway">
+      <div className="colorway-options" role="radiogroup" aria-label="Choose colorway" onKeyDown={handleKeyDown}>
         {Object.entries(colorways).map(([key, item]) => (
           <button
             key={key}
@@ -172,9 +189,12 @@ function ColorwayControl({ colorways, active, onChange, compact = false }) {
             role="radio"
             aria-label={item.label}
             aria-checked={active === key}
+            tabIndex={active === key ? 0 : -1}
+            data-color={key}
             onClick={() => onChange(key)}
           >
-            {item.label}
+            <span className={`color-swatch swatch-${key}`} aria-hidden="true" />
+            <span>{item.label}</span>
           </button>
         ))}
       </div>
@@ -283,6 +303,13 @@ export function App() {
   const [bagCount, setBagCount] = useState(0);
   const [added, setAdded] = useState(false);
   const [filmMuted, setFilmMuted] = useState(true);
+  const [filmPaused, setFilmPaused] = useState(false);
+  const drawerRef = useRef(null);
+  const menuRef = useRef(null);
+  const filmRef = useRef(null);
+
+  useDialogAccessibility(drawerOpen, () => setDrawerOpen(false), drawerRef);
+  useDialogAccessibility(mobileNavOpen, () => setMobileNavOpen(false), menuRef);
 
   const isLanding = activeObject === "landing";
   const isStudio = activeObject === "studio";
@@ -292,7 +319,12 @@ export function App() {
   const isRequest = object?.price === "PRICE ON REQUEST";
 
   useEffect(() => {
-    const handlePopState = () => setActiveObject(objectFromLocation());
+    const handlePopState = () => {
+      setActiveObject(objectFromLocation());
+      setDrawerOpen(false);
+      setMobileNavOpen(false);
+      setAdded(false);
+    };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
@@ -305,8 +337,14 @@ export function App() {
     };
   }, [drawerOpen, mobileNavOpen, isLanding, isStudio, object?.title]);
 
+  useEffect(() => {
+    setFilmPaused(false);
+  }, [activeObject]);
+
+  const scrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
+
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior(), block: "start" });
     setMobileNavOpen(false);
   };
 
@@ -325,7 +363,7 @@ export function App() {
     setAdded(false);
     setDrawerOpen(false);
     setMobileNavOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   const chooseColor = (color, shouldScroll = false) => {
@@ -339,10 +377,18 @@ export function App() {
     setAdded(true);
   };
 
+  const toggleFilm = () => {
+    const film = filmRef.current;
+    if (!film) return;
+    if (film.paused) film.play().catch(() => setFilmPaused(true));
+    else film.pause();
+  };
+
   if (isLanding) return <LandingPage onChange={changeObject} />;
 
   return (
     <main className={`site object-${activeObject} color-${activeColor}`}>
+      <a className="skip-link" href={isStudio ? "#about" : "#object"}>SKIP TO {isStudio ? "STUDIO" : "OBJECT"}</a>
       <header className="topbar">
         <button className="brand-button" type="button" onClick={() => changeObject("landing")} aria-label="Back to opening page">
           <img src={asset("wordmark-white.png")} alt="DFRBS Studio" />
@@ -359,7 +405,7 @@ export function App() {
           {bagCount > 0 && <span>{bagCount}</span>}
         </button>
 
-        <button className="menu-button" type="button" onClick={() => setMobileNavOpen(true)} aria-label="Open menu">
+        <button className="menu-button" type="button" onClick={() => setMobileNavOpen(true)} aria-label="Open menu" aria-expanded={mobileNavOpen} aria-controls="navigation-menu">
           <List size={27} weight="light" />
         </button>
 
@@ -369,36 +415,53 @@ export function App() {
       {isStudio ? <StudioPage activeObject={activeObject} onChange={changeObject} /> : <>
 
       <section id="top" className="hero" aria-labelledby="hero-title">
-        <img className="hero-image" src={object.hero} alt={object.heroAlt} />
+        <img className="hero-image" src={object.hero} alt={object.heroAlt} fetchPriority="high" />
         {object.heroMobile && <img className="hero-image lighter-mobile-hero" src={object.heroMobile} alt="" aria-hidden="true" />}
         <div className="hero-shade" aria-hidden="true" />
         <div className="hero-content">
-          <span className="eyebrow">{object.eyebrow}</span>
-          <h1 id="hero-title">{object.title}</h1>
+          <h1 id="hero-title">OBJECT <span>{object.code}</span></h1>
+          <span className="hero-concept">{object.eyebrow}</span>
           <p>{object.intro}<br />{object.subintro}</p>
-          <button className="outline-cta" type="button" onClick={() => scrollTo("object")}>
+          <button className="outline-cta" type="button" onClick={() => scrollTo("campaign")}>
             <span>EXPLORE THE OBJECT</span>
             <ArrowRight size={19} weight="light" />
           </button>
         </div>
-        <ColorwayControl colorways={object.colorways} active={activeColor} onChange={chooseColor} />
+        <div className="hero-dock">
+          <ColorwayControl colorways={object.colorways} active={activeColor} onChange={chooseColor} />
+          <button className="hero-scroll" type="button" onClick={() => scrollTo("campaign")} aria-label="Scroll to campaign">
+            <span>SCROLL TO EXPLORE</span><ArrowDown size={20} weight="light" />
+          </button>
+        </div>
       </section>
 
       {activeObject === "eyewear" ? (
         <>
           <section id="campaign" className="campaign-stage" aria-label={`${selected.label} eyewear campaign`}>
-            <div className="campaign-frame">
-              <img src={selected.campaign} alt={`Object 001 ${selected.label.toLowerCase()} campaign`} />
+            <div className="campaign-heading">
+              <h2>{selected.label}</h2>
+              <span>{selected.number} / 03 COLORWAYS</span>
             </div>
-            <ProductImage objectKey="eyewear" color={activeColor} className="giant-product" loading="eager" />
+            <div className="campaign-frame" key={`campaign-${activeColor}`}>
+              <img src={selected.campaign} alt={`Object 001 ${selected.label.toLowerCase()} campaign`} loading="lazy" />
+            </div>
+            <ProductImage key={`specimen-${activeColor}`} objectKey="eyewear" color={activeColor} className="giant-product" loading="eager" />
+            <div className="campaign-caption">
+              <div className="campaign-colorways">
+                <ColorwayControl colorways={object.colorways} active={activeColor} onChange={chooseColor} compact />
+                <p>{selected.description}</p>
+              </div>
+              <button className="text-link" type="button" onClick={() => scrollTo("object")}><span>DISCOVER THE FORM</span><ArrowRight size={18} weight="light" /></button>
+            </div>
           </section>
           <section className="eyewear-film" aria-labelledby="film-title">
             <div className="eyewear-film-copy">
-              <span className="eyebrow accent-copy">CAMPAIGN FILM / 001</span>
-              <h2 id="film-title"><span>FORM</span><span>IN MOTION</span></h2>
+              <h2 id="film-title"><span>FORM</span><span>IN</span><span>MOTION</span></h2>
+              <span className="film-caption">CAMPAIGN FILM / 001</span>
             </div>
             <div className="eyewear-film-player">
               <video
+                ref={filmRef}
                 src={asset("object-001-campaign-film.mp4")}
                 poster={asset("object-001-campaign-film-poster.webp")}
                 autoPlay
@@ -407,11 +470,18 @@ export function App() {
                 playsInline
                 preload="metadata"
                 aria-label="OBJECT 001 campaign film"
+                onPause={() => setFilmPaused(true)}
+                onPlay={() => setFilmPaused(false)}
               />
-              <button className="film-sound" type="button" onClick={() => setFilmMuted((muted) => !muted)} aria-label={filmMuted ? "Turn campaign film sound on" : "Mute campaign film"}>
+              <div className="film-controls">
+              <button className="film-play" type="button" onClick={toggleFilm} aria-label={filmPaused ? "Play campaign film" : "Pause campaign film"}>
+                {filmPaused ? <Play size={18} weight="light" /> : <Pause size={18} weight="light" />}
+              </button>
+              <button className="film-sound" type="button" onClick={() => setFilmMuted((muted) => !muted)} aria-label={filmMuted ? "Turn campaign film sound on" : "Mute campaign film"} aria-pressed={!filmMuted}>
                 {filmMuted ? <SpeakerSlash size={18} weight="light" /> : <SpeakerHigh size={18} weight="light" />}
                 <span>{filmMuted ? "SOUND OFF" : "SOUND ON"}</span>
               </button>
+              </div>
             </div>
             <div className="eyewear-film-meta">
               <span>OBJECT 001</span>
@@ -440,8 +510,8 @@ export function App() {
 
       <section id="object" className={`object-section ${activeObject === "lighter" ? "lighter-object-section" : ""}`} aria-labelledby="object-title">
         <div className="object-copy">
-          <span className="eyebrow accent-copy">{selected.label}</span>
           <h2 id="object-title">{object.mutation.split("\n").map((line) => <span key={line}>{line}</span>)}</h2>
+          <span className="object-color-label">{selected.label} / {selected.number}</span>
           <p>{object.story.split("\n").map((line) => <span key={line}>{line}</span>)}</p>
           <button className="text-link" type="button" onClick={() => setDrawerOpen(true)}>
             <span>SHOP NOW</span>
@@ -479,11 +549,13 @@ export function App() {
             key={key}
             className={`collection-card colorway-${key} ${activeColor === key ? "is-active" : ""}`}
             type="button"
+            aria-pressed={activeColor === key}
             onClick={() => chooseColor(key, true)}
           >
             <img src={item.product} alt={`${item.label.toLowerCase()} ${object.title}`} />
             <span className="collection-card-meta">
-              <span>{item.label}</span>
+              <span><small>{item.number}</small>{item.label}</span>
+              {activeColor === key && <span className="collection-selected">SELECTED</span>}
               <ArrowRight size={18} weight="light" />
             </span>
           </button>
@@ -505,7 +577,7 @@ export function App() {
       </footer>
 
       {mobileNavOpen && (
-        <div className="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div ref={menuRef} id="navigation-menu" className="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" tabIndex={-1}>
           <button className="close-button" type="button" onClick={() => setMobileNavOpen(false)} aria-label="Close menu">
             <X size={28} weight="light" />
           </button>
@@ -522,7 +594,7 @@ export function App() {
         <div className="drawer-layer" role="presentation" onMouseDown={(event) => {
           if (event.target === event.currentTarget) setDrawerOpen(false);
         }}>
-          <aside className="product-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+          <aside ref={drawerRef} className="product-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabIndex={-1}>
             <button className="close-button" type="button" onClick={() => setDrawerOpen(false)} aria-label="Close product panel">
               <X size={27} weight="light" />
             </button>
@@ -543,6 +615,7 @@ export function App() {
             <button className={`add-button ${added ? "is-added" : ""}`} type="button" onClick={addToBag}>
               {added ? <><CheckCircle size={20} weight="fill" /> {isRequest ? "REQUEST SAVED" : "ADDED TO BAG"}</> : <>{isRequest ? "REQUEST AVAILABILITY" : "ADD TO BAG"} <ArrowRight size={19} /></>}
             </button>
+            <span className="bag-feedback" role="status" aria-live="polite">{added ? `${selected.label} ${object.title} added. ${bagCount} ${bagCount === 1 ? "item" : "items"} in your bag.` : ""}</span>
           </aside>
         </div>
       )}
