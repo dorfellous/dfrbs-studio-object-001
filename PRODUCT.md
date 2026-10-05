@@ -24,7 +24,7 @@ A complete creative studio website for the proposed shared practice of Ran Bensi
 
 ## Brand Commitments
 
-The user confirmed DFRBS Studio and brands, artists and cultural organisations. They rejected campaign polish and approved Open drawer composition 2 as a reinvention, then broadened the scope to the shared studio. Inherit its charcoal/chrome world, flat plate and drawer grammar, strong Archivo typography and supplied wordmark across the wider website. HEAT stays a product and small active accent; avoid large coloured backgrounds.
+The user confirmed DFRBS Studio and brands, artists and cultural organisations. They rejected campaign polish and approved Open drawer composition 2 as a reinvention, then broadened the scope to the shared studio. Inherit its charcoal/chrome world, flat plate and drawer grammar, strong Archivo typography and supplied wordmark across the wider website. HEAT stays a product and small active accent; avoid large coloured backgrounds. The collaborator’s black-office / pink-fur / long-manicure daydream defines a confident, witty, queer/fashion sensibility backed by serious craft. The wider site uses small pink marks and a labelled concept image to convey that spirit. It makes no literal office, staff or dress-code claims.
 
 ## Evidence on Hand
 

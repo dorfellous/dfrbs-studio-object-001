@@ -18,7 +18,9 @@ Portfolio images and films are from the two founders’ public portfolios, as su
 
 The Dor fashion film was encoded for web delivery with H.264 CRF 22, AAC 128k and fast-start metadata. The original 512 × 736 frame, aspect ratio, 14.633-second duration and audio were retained. The shipped file is approximately 2.77 MB, down from 7.70 MB.
 
-The object campaign, transparent eyewear images, lighter media, wordmark and archive studio images are preserved supplied repository assets. Archive office/boardroom images are conceptual studio imagery; the joint studio’s About page uses actual founder work rather than claiming these depict current premises.
+The object campaign, transparent eyewear images, lighter media, wordmark and archive studio images are preserved supplied repository assets. Archive office/boardroom images are conceptual studio imagery. Both the joint About page and archive label these as concepts, with alt text describing imagined scenes rather than current premises or employees.
+
+`public/assets/studio/studio-daydream.webp` is a quality-86 WebP conversion of the supplied `public/assets/studio-office-v1.png`, preserving the complete 1536 × 1024 image without resizing or cropping. Its visible “STUDIO DAYDREAM / CONCEPT IMAGE” caption identifies the founders’ black-office, pink-fur and long-manicure idea as brand spirit.
 
 `public/assets/atelier-graphite.webp` is generated non-semantic material: a fine dark table texture, with no objects, words or marks. Generation provenance and prompt are recorded in `.impeccable/asset-manifest.json` and the asset’s JSON sidecar. Its native 1448 × 1086 output was preserved, then encoded as quality-84 WebP (~108 KB). Semantic text, numerals, controls and rules are rendered in HTML/CSS.
 

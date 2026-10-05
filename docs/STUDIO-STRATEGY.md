@@ -8,6 +8,10 @@ Recommended position: **a creative studio combining artistic direction and creat
 
 Use **Websites & creative tools** as the client-facing label. “Vibe coding” can explain a method when useful, but does not describe the user task, production scope or handover.
 
+## Brand attitude
+
+**“Wicked taste. Serious craft.”** sets the tone: a strong point of view, sly queer/fashion wit and technical competence. The collaborator’s imagined all-black office, pink fur, black outfits and long pink manicures express the studio’s spirit; they are not claims about real premises, staff or a dress code. “Confident bitches” means assured taste and command of the craft, translated for clients into concrete scope, clear decisions and follow-through. **“A studio with nerve.”**, **“Black room. Pink fur. Sharp minds.”** and **“Long nails. High standards.”** carry that attitude. **“Bring the brief. Bring the obsession.”** makes the invitation generous. Keep service and project facts precise beneath the wit.
+
 ## Observed founder evidence
 
 - **Ran Bensimon:** real-time 3D, generative AI, film and performance visuals, workflow engineering, browser projects and teaching. [Portfolio](https://ranbensimon.com/), [Neon Dojo](https://ranbensimon.com/neon-dojo-fight/), [tutorials and lectures](https://ranbensimon.com/tutorials-and-lectures/).

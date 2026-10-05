@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-05T05:34:32.263Z",
+  "generatedAt": "2026-10-05T05:42:43.272Z",
   "title": "Design System: DFRBS Studio",
   "extensions": {
     "colorMeta": {
@@ -297,6 +297,20 @@
           "oklch(84% 0.111 35.6)",
           "oklch(95% 0.111 35.6)"
         ]
+      },
+      "studio-pink": {
+        "role": "secondary",
+        "displayName": "Studio Pink",
+        "tonalRamp": [
+          "oklch(15% 0.222 346.7)",
+          "oklch(26% 0.222 346.7)",
+          "oklch(38% 0.222 346.7)",
+          "oklch(49% 0.222 346.7)",
+          "oklch(61% 0.222 346.7)",
+          "oklch(72% 0.222 346.7)",
+          "oklch(84% 0.222 346.7)",
+          "oklch(95% 0.222 346.7)"
+        ]
       }
     },
     "typographyMeta": {
@@ -410,6 +424,10 @@
         "value": "760px"
       },
       {
+        "name": "studio-attitude-stack-max",
+        "value": "740px"
+      },
+      {
         "name": "narrow-object-max",
         "value": "360px"
       }
@@ -436,9 +454,9 @@
       "name": "Ruled secondary action",
       "kind": "button",
       "refersTo": "button-text",
-      "description": "Transparent text action with a straight bottom seam.",
+      "description": "Transparent wider-studio text action with a straight seam and Studio Pink hover.",
       "html": "<a class=\"ds-text\" href=\"?page=work\">EXPLORE THE WORK <svg width=\"24\" height=\"24\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"12\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M48 128h160M136 56l72 72-72 72\"/></svg></a>",
-      "css": ".ds-text{display:inline-flex;gap:26px;align-items:center;font-family:Archivo,sans-serif;font-size:10px;letter-spacing:.1em;padding:12px 0;border-bottom:1px solid var(--rule,#53534f);color:var(--paper,#e5e2db);background:transparent;text-decoration:none;text-transform:uppercase;border-radius:0}.ds-text:hover{border-color:var(--paper,#e5e2db)}.ds-text:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:4px}"
+      "css": ".ds-text{display:inline-flex;gap:26px;align-items:center;font-family:Archivo,sans-serif;font-size:10px;letter-spacing:.1em;padding:12px 0;border-bottom:1px solid var(--rule,#53534f);color:var(--paper,#e5e2db);background:transparent;text-decoration:none;text-transform:uppercase;border-radius:0}.ds-text:hover{border-color:var(--paper,#e5e2db);color:var(--studio-pink,#ff5bbc)}.ds-text:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:4px}"
     },
     {
       "name": "Brief field",
@@ -451,9 +469,9 @@
     {
       "name": "Studio navigation",
       "kind": "nav",
-      "description": "Archivo header links with active and hover underlines.",
+      "description": "Archivo header links with small Studio Pink active and hover underlines.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"?page=work\" aria-current=\"page\">WORK</a><a href=\"?page=services\">SERVICES</a><a href=\"?page=studio\">STUDIO</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:46px}.ds-nav a{position:relative;padding:10px 0;color:var(--paper,#e5e2db);font-family:Archivo,sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-decoration:none}.ds-nav a:after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--paper,#e5e2db);transform:scaleX(0);transform-origin:left;transition:transform .25s ease-out}.ds-nav a:hover:after,.ds-nav a[aria-current=page]:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:4px}@media(max-width:760px){.ds-nav{justify-content:space-between;gap:0}.ds-nav a{font-size:9px;padding:14px 0 15px}}@media(prefers-reduced-motion:reduce){.ds-nav a:after{transition:none}}"
+      "css": ".ds-nav{display:flex;align-items:center;gap:46px}.ds-nav a{position:relative;padding:10px 0;color:var(--paper,#e5e2db);font-family:Archivo,sans-serif;font-size:11px;font-weight:500;letter-spacing:.12em;text-decoration:none}.ds-nav a:after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--studio-pink,#ff5bbc);transform:scaleX(0);transform-origin:left;transition:transform .25s ease-out}.ds-nav a:hover:after,.ds-nav a[aria-current=page]:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:4px}@media(max-width:760px){.ds-nav{justify-content:space-between;gap:0}.ds-nav a{font-size:9px;padding:14px 0 15px}}@media(prefers-reduced-motion:reduce){.ds-nav a:after{transition:none}}"
     },
     {
       "name": "Service drawer",
@@ -466,9 +484,9 @@
     {
       "name": "Work filters",
       "kind": "nav",
-      "description": "Underlined text filters with current route state and mobile overflow.",
+      "description": "Underlined text filters with a Studio Pink current-state rule and mobile overflow.",
       "html": "<nav class=\"ds-filters\" aria-label=\"Filter selected work\"><a href=\"?page=work\" aria-current=\"true\">All work</a><a href=\"?page=work&service=film\">Films</a><a href=\"?page=work&service=3d\">3D & fashion</a><a href=\"?page=work&service=web\">Interactive</a></nav>",
-      "css": ".ds-filters{display:flex;gap:32px;align-items:center;padding:20px clamp(20px,3.2vw,50px);border-bottom:1px solid var(--rule,#53534f)}.ds-filters a{font-family:Archivo,sans-serif;padding:12px 0;font-size:11px;white-space:nowrap;color:var(--muted,#a7a59f);border-bottom:1px solid transparent;text-decoration:none}.ds-filters a[aria-current]{color:var(--paper,#e5e2db);border-color:var(--paper,#e5e2db)}.ds-filters a:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:4px}@media(max-width:760px){.ds-filters{padding:12px 20px;gap:25px;overflow-x:auto;align-items:start}.ds-filters a{font-size:10px}}"
+      "css": ".ds-filters{display:flex;gap:32px;align-items:center;padding:20px clamp(20px,3.2vw,50px);border-bottom:1px solid var(--rule,#53534f)}.ds-filters a{font-family:Archivo,sans-serif;padding:12px 0;font-size:11px;white-space:nowrap;color:var(--muted,#a7a59f);border-bottom:1px solid transparent;text-decoration:none}.ds-filters a[aria-current]{color:var(--paper,#e5e2db);border-color:var(--studio-pink,#ff5bbc)}.ds-filters a:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:4px}@media(max-width:760px){.ds-filters{padding:12px 20px;gap:25px;overflow-x:auto;align-items:start}.ds-filters a{font-size:10px}}"
     },
     {
       "name": "Square quantity stepper",
@@ -480,10 +498,11 @@
   ],
   "narrative": {
     "northStar": "The open studio drawer",
-    "overview": "Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface.\n\nThis is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose.",
+    "overview": "Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.\n\nThis is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The user's imagined black office, pink fur and extravagant long pink manicures supply the cultural spirit. “Wicked taste. Serious craft.” introduces the practice; “Long nails. High standards.” states its conviction. The office appears as a labelled daydream concept, with no claim about current premises or staff.",
     "keyCharacteristics": [
       "Authored founder imagery and films lead.",
-      "Charcoal, pearl and chrome form the shared material language.",
+      "Charcoal, pearl and chrome form the shared material language, with small pink active/hover marks.",
+      "Confident taste and playful excess are backed by specific decisions, tests and finishing.",
       "Archivo provides expressive headings and readable prose; DM Mono handles compact indexes and technical captions.",
       "Artifact plates, ruled rows and native drawers replace rounded cards.",
       "Rectangular pale actions remain easy to find beside large images.",
@@ -493,6 +512,11 @@
       {
         "name": "The Restrained Heat Rule",
         "body": "HEAT belongs to product imagery and small object-selection states. Keep broad interface backgrounds neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Precise Pink Rule",
+        "body": "Use Studio Pink for small studio active and hover marks. Keep the interface's broad surfaces charcoal and pearl; pink fur belongs to the labelled concept image.",
         "section": "colors"
       },
       {
@@ -515,16 +539,18 @@
       "Do reuse the supplied wordmark, authored founder work, campaign films and accurate object assets.",
       "Do use charcoal/pearl surfaces, square actions and straight seams as the shared interface language.",
       "Do retain the separate individual-credit metadata beside portfolio imagery.",
+      "Do label the studio daydream as a concept image and keep taste-and-craft voice distinct from plain navigation, service scope and form instructions.",
       "Do adapt layout to the surface: image archive, credited dossier, service drawer or reviewable brief.",
       "Do preserve contained artifact/project-media fitting and deliberate editorial cropping.",
       "Do retain native controls, visible focus, keyboard selection, focus-managed dialogs and reduced-motion behaviour."
     ],
     "donts": [
       "Don't bring back the discarded Bebas Neue / IBM Plex Mono campaign identity.",
-      "Don't introduce rounded cards, pill filters, broad HEAT backgrounds or decorative interface gradients.",
+      "Don't introduce rounded cards, pill filters, broad HEAT or Studio Pink backgrounds, or decorative interface gradients.",
       "Don't turn the homepage's 62% / 38% split into a mandatory layout for every page.",
       "Don't stretch, redraw or crop away defining object anatomy.",
       "Don't substitute stock imagery or describe selected-work images as founder portraits.",
+      "Don't describe the studio daydream as actual premises, staff or a dress code.",
       "Don't present local brief preparation or the object bag as completed server submission, payment or inventory."
     ]
   }

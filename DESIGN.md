@@ -7,6 +7,7 @@ colors:
   muted: "#a7a59f"
   seam: "#53534f"
   heat: "#fa7a25"
+  studio-pink: "#ff5bbc"
   white: "#fff"
   inspection: "#141414"
   drawer: "#151515"
@@ -166,16 +167,17 @@ components:
 
 **Creative North Star: "The open studio drawer"**
 
-Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface.
+Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.
 
-This is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose.
+This is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The user's imagined black office, pink fur and extravagant long pink manicures supply the cultural spirit. “Wicked taste. Serious craft.” introduces the practice; “Long nails. High standards.” states its conviction. The office appears as a labelled daydream concept, with no claim about current premises or staff.
 
-The source of truth is [atelier.css](src/atelier.css), [studioWebsite.css](src/studioWebsite.css), [services.css](src/services.css), [inquiry.css](src/inquiry.css), [studio.css](src/studio.css) and the matching JSX. [PRODUCT.md](PRODUCT.md), the body contract in [index.html](index.html) and the [complete-studio specification](docs/superpowers/specs/2026-10-05-complete-studio.md) establish the approved scope. The object authority is [Open drawer composition 2](.impeccable/mocks/reinvention-comp-2.png). Tokens above record implemented values; the sidecar carries extensions and preview snippets. Its generated tonal ramps are preview metadata, not additional implemented palette steps.
+The source of truth is [atelier.css](src/atelier.css), [studioWebsite.css](src/studioWebsite.css), [services.css](src/services.css), [inquiry.css](src/inquiry.css), [studio.css](src/studio.css) and the matching JSX. [PRODUCT.md](PRODUCT.md), the body contract in [index.html](index.html) and the [complete-studio specification](docs/superpowers/specs/2026-10-05-complete-studio.md) establish the approved scope; the [studio-spirit clarification](docs/superpowers/specs/2026-10-05-studio-spirit.md) records the later voice and accent refinement. The object authority is [Open drawer composition 2](.impeccable/mocks/reinvention-comp-2.png). Tokens above record implemented values; the sidecar carries extensions and preview snippets. Its generated tonal ramps are preview metadata, not additional implemented palette steps.
 
 **Key Characteristics:**
 
 - Authored founder imagery and films lead.
-- Charcoal, pearl and chrome form the shared material language.
+- Charcoal, pearl and chrome form the shared material language, with small pink active/hover marks.
+- Confident taste and playful excess are backed by specific decisions, tests and finishing.
 - Archivo provides expressive headings and readable prose; DM Mono handles compact indexes and technical captions.
 - Artifact plates, ruled rows and native drawers replace rounded cards.
 - Rectangular pale actions remain easy to find beside large images.
@@ -183,12 +185,16 @@ The source of truth is [atelier.css](src/atelier.css), [studioWebsite.css](src/s
 
 ## Colors
 
-The palette is a warm neutral range with a small HEAT accent. The frontmatter preserves the CSS source notation.
+The palette is a warm neutral range with small Studio Pink marks in the wider site and the established HEAT accent in the object archive. The frontmatter preserves the CSS source notation.
 
 ### Primary
 
-- **Pearl:** Primary reading colour, selected navigation marks and pale filled actions. On filled actions, Charcoal becomes the text colour.
+- **Pearl:** Primary reading colour, selected object-view marks and pale filled actions. On filled actions, Charcoal becomes the text colour.
 - **HEAT:** The warm orange accent used on selected object thumbnails and names, plus the object detail action on hover. It stays local to those states rather than becoming a general studio call-to-action colour.
+
+### Secondary
+
+- **Studio Pink:** The scoped `--studio-pink` accent on wider-studio navigation and preview-selector underlines, active work-filter rules, contact/text/service/footer link hover, and the manifesto caption. It does not recolour object controls or filled primary actions.
 
 ### Neutral
 
@@ -205,6 +211,8 @@ The palette is a warm neutral range with a small HEAT accent. The frontmatter pr
 - **Inquiry Error:** Inline validation messages, error summary and invalid field underline. Errors retain text and semantic state as well as colour.
 
 **The Restrained Heat Rule.** HEAT belongs to product imagery and small object-selection states. Keep broad interface backgrounds neutral.
+
+**The Precise Pink Rule.** Use Studio Pink for small studio active and hover marks. Keep the interface's broad surfaces charcoal and pearl; pink fur belongs to the labelled concept image.
 
 ## Typography
 
@@ -235,7 +243,7 @@ The system uses full-width sections and asymmetrical grids separated by one-pixe
 | Work archive | Page introduction, horizontal underlined filters, then a two-column artifact grid with separate image and credit metadata. |
 | Project dossier | Wide contained media, then a 1.25fr / 1fr explanation-and-credit grid. Embedded film players use 16:9. |
 | Services | A 1.35fr / 1fr introduction, six numbered native disclosure drawers, and expanded scope/delivery columns at 1.45fr / 1fr. |
-| Joint studio | Two founder work-image/profile columns, followed by a 1fr / 1.15fr process section and a large typographic statement. These are work images, not founder portraits. |
+| Joint studio | A 56% / 44% concept-image/attitude plate, then two founder work-image/profile columns, a 1fr / 1.15fr process section and a large typographic statement. These are work images, not founder portraits. |
 | Project brief | A 1.25fr / .75fr introduction, then a narrow supporting aside beside a broad form at .7fr / 1.6fr. Paired fields use two columns; the reviewed brief follows the form. |
 | Objects 001 / 002 | A 67.2% inspection plate and 32.8% order slip, minimum height 690px. Cabinet rows provide onward navigation; campaign chapters use their own split grids. |
 | Archived studio 000 | Statement/office plate at 1.6fr / 1fr; boardroom/copy at 1.85fr / 1fr. It retains its office and boardroom imagery within the current material world. |
@@ -249,6 +257,7 @@ The wide studio header is sticky, minimum height 76px, with brand, navigation an
 | 1080px and below | Service drawer number/title/copy columns tighten and expanded content indents reduce. |
 | 1050px and below | Inquiry and archived studio layouts tighten independently. The inquiry submit row becomes vertical. |
 | 760px and below | Headers become two rows with visible navigation. Homepage identity/action comes before its media plate. Work and founder grids, dossiers, service content and brief fields become single-column. Inquiry aside comes before the form. Object inspection comes before ordering; the order photograph follows the controls. Gutters are predominantly 20px. |
+| 740px and below | Studio daydream plate stacks; its copy loses the left seam and gains a top seam. |
 | 360px and below | Object header and cabinet gutters become 14px and archive labels tighten. |
 
 Mobile archive filters scroll horizontally; their work count hides. Homepage metadata in the selector rail hides. Object cabinet imagery and notes hide while the numbered destination remains. Object inspection height uses `clamp(360px, 100vw, 580px)`; homepage fashion media has a taller mobile plate than its film/object alternatives. These are surface-specific behaviours, not one shared hero preset.
@@ -279,19 +288,25 @@ Pale rectangular actions anchor the next step without competing with authored im
 - **Object purchase:** Full-width pale action; confirmation changes to Added and a check icon, with a polite live status. Mobile minimum height is 56px.
 - **Service action:** Compact DM Mono copy, a 54px minimum height and a wide arrow gap. The matching secondary action is transparent with a bottom seam.
 - **Inquiry action:** Readable mixed-case Archivo, 58px minimum height, 17px / 22px padding. On mobile it spans the form and uses 56px minimum height.
-- **Text links:** Transparent, square, underlined by a straight seam, with small directional icons. Hover brightens the rule or text.
+- **Text links:** Transparent, square, underlined by a straight seam, with small directional icons. Wider-studio text links hover in Studio Pink while their rule brightens to Pearl; object and service-page links retain their own established states.
 
 ### Navigation and filters
 
-The supplied wordmark anchors the sticky header. Wider studio navigation uses Archivo at the navigation token; numbered object navigation uses mono. Active routes and hover reveal a one-pixel underline. Both headers keep their navigation visible on a second mobile row.
+The supplied wordmark anchors the sticky header. Wider studio navigation uses Archivo at the navigation token; numbered object navigation uses mono. Active routes and hover reveal a one-pixel Studio Pink underline in the wider site; object navigation retains Pearl. Both headers keep their navigation visible on a second mobile row.
 
-Work filters are text links with an active bottom rule and `aria-current`. They scroll horizontally on mobile. They are not filled chips. Navigation preserves query links and browser history; route changes move focus to the page heading without adding a visible heading outline.
+Work filters are text links with an active Studio Pink bottom rule and `aria-current`. They scroll horizontally on mobile. They are not filled chips. Navigation preserves query links and browser history; route changes move focus to the page heading without adding a visible heading outline.
 
 ### Artifact plates and work tiles
 
 Work tiles have an image plate, a square bottom-right arrow tab and a separate title/individual-credit row. There is no enclosing card border, rounding or shadow. Desktop image aspect ratio is 1.45, mobile 1.2. Editorial images cover; object images contain. Hover image scale is 1.035, so the artifact remains the dominant content.
 
 Project media uses contained fit, bounded by its actual dimensions rather than forcing every work into an archive crop. Founder profile images are selected work with descriptive alt text and individual portfolio links.
+
+### Studio daydream and manifesto
+
+The StudioAttitude plate pairs the supplied [studio daydream image](public/assets/studio/studio-daydream.webp) with “Black room. Pink fur. Sharp minds.” Its caption explicitly reads “STUDIO DAYDREAM / CONCEPT IMAGE”. The image follows its natural proportions at full column width. A dark square caption overlay (`#111e`) uses DM Mono; copy sits beyond a straight vertical seam, with 15px / 1.8 body text capped at 42ch.
+
+This plate communicates imagined black-office / pink-fur / long-manicure spirit, not current premises, staff or a dress code. Mobile stacks the plate at 740px, moves the seam above the copy and uses 14px body text. The closing Archivo manifesto reads “LONG NAILS. HIGH STANDARDS.” with compact mono support. Its support caption uses Studio Pink on desktop and mobile.
 
 ### Service drawers
 
@@ -332,6 +347,7 @@ A global reduced-motion rule removes all animations/transitions and uses immedia
 - **Do** reuse the supplied wordmark, authored founder work, campaign films and accurate object assets.
 - **Do** use charcoal/pearl surfaces, square actions and straight seams as the shared interface language.
 - **Do** retain the separate individual-credit metadata beside portfolio imagery.
+- **Do** label the studio daydream as a concept image and keep taste-and-craft voice distinct from plain navigation, service scope and form instructions.
 - **Do** adapt layout to the surface: image archive, credited dossier, service drawer or reviewable brief.
 - **Do** preserve contained artifact/project-media fitting and deliberate editorial cropping.
 - **Do** retain native controls, visible focus, keyboard selection, focus-managed dialogs and reduced-motion behaviour.
@@ -339,8 +355,9 @@ A global reduced-motion rule removes all animations/transitions and uses immedia
 ### Don't:
 
 - **Don't** bring back the discarded Bebas Neue / IBM Plex Mono campaign identity.
-- **Don't** introduce rounded cards, pill filters, broad HEAT backgrounds or decorative interface gradients.
+- **Don't** introduce rounded cards, pill filters, broad HEAT or Studio Pink backgrounds, or decorative interface gradients.
 - **Don't** turn the homepage's 62% / 38% split into a mandatory layout for every page.
 - **Don't** stretch, redraw or crop away defining object anatomy.
 - **Don't** substitute stock imagery or describe selected-work images as founder portraits.
+- **Don't** describe the studio daydream as actual premises, staff or a dress code.
 - **Don't** present local brief preparation or the object bag as completed server submission, payment or inventory.

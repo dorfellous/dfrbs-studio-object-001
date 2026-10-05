@@ -37,3 +37,9 @@ The first home/mobile-002 captures reflected browser scroll anchoring or stale r
 ## Delivery boundary
 
 The source, preview, design system, strategy and draft pull request are reviewable. No public deployment or merge was performed. Inquiry uses an email draft; the product bag has no checkout backend. These are clearly disclosed in the interface and README.
+
+## Studio spirit refinement
+
+The collaborator’s black-room, pink-fur and long-manicure daydream is expressed through “Wicked taste. Serious craft.”, precise pink accents, a labelled concept plate and “Long nails. High standards.” The original studio archive also identifies its office and boardroom images as imagined concepts. Service scopes, project credits and functional boundaries are retained.
+
+The refreshed production build passed. The hosting tests passed 4/4 before the final caption-colour and archive-label corrections; those corrections do not alter hosting behavior. A batched desktop/mobile inspection and one confirmation round checked the home and About layouts at 1440 × 1000 and 390 × 844. Both sizes had no horizontal overflow; the daydream image loaded at its original 1536px width, its concept caption was visible, and the closing caption computed to Studio Pink at both sizes. The independent scoped finish review found no material copy, layout or concept-truth findings. Design documentation, media provenance, strategy and preview captures reflect the clarification.

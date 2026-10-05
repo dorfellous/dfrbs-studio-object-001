@@ -36,11 +36,11 @@ export function StudioPage({ onChange }) {
         <figure className="studio-office-plate">
           <img
             src={asset("studio-office-v1.png")}
-            alt="DFRBS Studio team working in the black and hot-pink production studio"
+            alt="Imagined black and hot-pink studio with pink fur carpets and extravagant manicures"
             fetchPriority="high"
           />
           <figcaption>
-            <span>DFRBS STUDIO</span>
+            <span>STUDIO DAYDREAM / CONCEPT IMAGE</span>
             <span>000 / RIGHT NOW</span>
           </figcaption>
         </figure>
@@ -50,10 +50,10 @@ export function StudioPage({ onChange }) {
         <figure className="studio-boardroom-plate">
           <img
             src={asset("studio-boardroom-v1.png")}
-            alt="Alien-forward DFRBS Studio team in a creative production meeting"
+            alt="Imagined alien-forward creative studio meeting"
             loading="lazy"
           />
-          <figcaption>2026—2040 / RIGHT NOW</figcaption>
+          <figcaption>CONCEPT IMAGE / 2026—2040 / RIGHT NOW</figcaption>
         </figure>
         <div className="studio-boardroom-copy">
           <h2 id="studio-boardroom-title">A SHARP STUDIO CAPABLE OF EVERYTHING.</h2>
