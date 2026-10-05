@@ -5,3 +5,8 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Local review notes and intermediate artifacts
+work/
+.impeccable/mocks/reinvention-comp-1.png
+.impeccable/mocks/reinvention-comp-3.png

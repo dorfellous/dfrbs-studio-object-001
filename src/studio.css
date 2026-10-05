@@ -1,0 +1,422 @@
+.studio-page {
+  --studio-seam: rgba(242, 241, 237, 0.27);
+  --studio-ink: #f2f1ed;
+  --studio-muted: #a9a9a4;
+  --studio-gutter: clamp(24px, 3.1vw, 48px);
+  color: var(--studio-ink);
+  background: #111110;
+  font-family: "Archivo", sans-serif;
+}
+
+.studio-page h1,
+.studio-page h2,
+.studio-page p,
+.studio-page figure,
+.studio-page ul {
+  margin: 0;
+}
+
+.studio-dossier {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  min-height: min(760px, calc(100svh - 76px));
+  border-bottom: 1px solid var(--studio-seam);
+}
+
+.studio-statement {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 132px;
+  padding: 40px var(--studio-gutter) 38px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.studio-ghost {
+  position: absolute;
+  z-index: -1;
+  top: 78px;
+  left: 22px;
+  color: #20201e;
+  font-size: clamp(240px, 35.5vw, 570px);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+.studio-title-block h1 {
+  font-size: clamp(48px, 6.3vw, 96px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.studio-time,
+.studio-office-plate figcaption,
+.studio-boardroom-plate figcaption,
+.studio-manifesto-values,
+.studio-boardroom-copy p,
+.studio-disciplines h2,
+.studio-close > p,
+.studio-object-link small {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.12em;
+}
+
+.studio-time {
+  margin-top: 21px !important;
+  color: var(--studio-muted);
+}
+
+.studio-manifesto {
+  position: relative;
+  max-width: 800px;
+}
+
+.studio-manifesto h2 {
+  max-width: 25ch;
+  font-size: clamp(30px, 3.25vw, 49px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.studio-manifesto h2 em {
+  font-style: normal;
+  color: var(--studio-muted);
+}
+
+.studio-manifesto-values {
+  margin-top: 33px !important;
+  color: var(--studio-muted);
+  line-height: 1.7;
+}
+
+.studio-office-plate {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-left: 1px solid var(--studio-seam);
+}
+
+.studio-office-plate img {
+  display: block;
+  flex: 1;
+  width: 100%;
+  height: 0;
+  min-height: 560px;
+  object-fit: cover;
+  object-position: 52% center;
+}
+
+.studio-office-plate figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 23px;
+  border-top: 1px solid var(--studio-seam);
+  color: var(--studio-muted);
+  font-size: 9px;
+}
+
+.studio-boardroom-chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+  border-bottom: 1px solid var(--studio-seam);
+}
+
+.studio-boardroom-plate {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-boardroom-plate img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.studio-boardroom-plate figcaption {
+  flex: 1;
+  padding: 17px var(--studio-gutter);
+  color: var(--studio-muted);
+  border-top: 1px solid var(--studio-seam);
+  font-size: 9px;
+}
+
+.studio-boardroom-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 42px 32px 28px;
+  border-left: 1px solid var(--studio-seam);
+  overflow: hidden;
+}
+
+.studio-boardroom-copy h2 {
+  max-width: 13ch;
+  font-size: clamp(31px, 3.1vw, 47px);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.studio-boardroom-copy p {
+  color: var(--studio-muted);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.studio-boardroom-mark {
+  color: #333330;
+  font-size: clamp(58px, 7.5vw, 114px);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+}
+
+.studio-disciplines {
+  padding: 32px var(--studio-gutter) 48px;
+  border-bottom: 1px solid var(--studio-seam);
+}
+
+.studio-disciplines h2 {
+  color: var(--studio-muted);
+  margin-bottom: 28px;
+}
+
+.studio-disciplines ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 0;
+  list-style: none;
+}
+
+.studio-disciplines li {
+  font-size: clamp(32px, 5.5vw, 84px);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+}
+
+.studio-disciplines li span {
+  display: inline-block;
+  padding: 0 0.12em;
+  color: #6f6f69;
+  font-weight: 400;
+}
+
+.studio-close {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  align-items: start;
+  gap: 40px;
+  padding: 38px var(--studio-gutter) 42px;
+  border-bottom: 1px solid var(--studio-seam);
+}
+
+.studio-close > p {
+  padding-top: 15px;
+  color: var(--studio-muted);
+}
+
+.studio-object-links {
+  display: grid;
+}
+
+.studio-object-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  width: 100%;
+  min-height: 64px;
+  padding: 17px 0;
+  border: 0;
+  border-bottom: 1px solid var(--studio-seam);
+  background: transparent;
+  color: var(--studio-ink);
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(18px, 1.8vw, 27px);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  text-align: left;
+  cursor: pointer;
+}
+
+.studio-object-link > span {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.studio-object-link small {
+  color: var(--studio-muted);
+}
+
+.studio-object-link svg {
+  flex-shrink: 0;
+  transition: transform 180ms ease-out;
+}
+
+.studio-object-link:hover svg {
+  transform: translateX(5px);
+}
+
+.studio-object-link:focus-visible {
+  outline: 2px solid var(--studio-ink);
+  outline-offset: 5px;
+}
+
+@media (max-width: 1050px) {
+  .studio-statement {
+    gap: 120px;
+  }
+
+  .studio-title-block h1 {
+    font-size: 6.2vw;
+  }
+
+  .studio-manifesto h2 {
+    font-size: clamp(29px, 3.3vw, 36px);
+  }
+
+  .studio-boardroom-copy {
+    padding: 30px 24px 23px;
+  }
+
+  .studio-boardroom-copy h2 {
+    font-size: 31px;
+  }
+
+  .studio-boardroom-copy p br {
+    display: none;
+  }
+
+  .studio-boardroom-mark {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .studio-page {
+    --studio-gutter: 20px;
+  }
+
+  .studio-dossier,
+  .studio-boardroom-chapter,
+  .studio-close {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .studio-statement {
+    min-height: 575px;
+    gap: 100px;
+    padding-top: 32px;
+    padding-bottom: 30px;
+  }
+
+  .studio-title-block h1 {
+    font-size: clamp(40px, 10.4vw, 74px);
+  }
+
+  .studio-ghost {
+    top: 83px;
+    left: 12px;
+    font-size: 54vw;
+  }
+
+  .studio-manifesto h2 {
+    max-width: 23ch;
+    font-size: clamp(29px, 5.8vw, 43px);
+  }
+
+  .studio-manifesto-values {
+    margin-top: 28px !important;
+  }
+
+  .studio-office-plate,
+  .studio-boardroom-copy {
+    border-left: 0;
+    border-top: 1px solid var(--studio-seam);
+  }
+
+  .studio-office-plate img {
+    flex: none;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    object-position: center;
+  }
+
+  .studio-office-plate figcaption {
+    padding: 16px var(--studio-gutter);
+  }
+
+  .studio-boardroom-copy {
+    gap: 29px;
+    padding: 30px var(--studio-gutter);
+  }
+
+  .studio-boardroom-copy h2 {
+    max-width: 19ch;
+    font-size: clamp(34px, 6.6vw, 48px);
+  }
+
+  .studio-boardroom-copy p {
+    max-width: 47ch;
+  }
+
+  .studio-boardroom-mark {
+    align-self: flex-end;
+    font-size: 20vw;
+  }
+
+  .studio-disciplines {
+    padding-top: 27px;
+    padding-bottom: 34px;
+  }
+
+  .studio-disciplines h2 {
+    margin-bottom: 22px;
+  }
+
+  .studio-disciplines li {
+    font-size: clamp(25px, 6.65vw, 48px);
+    line-height: 1.3;
+  }
+
+  .studio-close {
+    gap: 18px;
+    padding-top: 26px;
+    padding-bottom: 30px;
+  }
+
+  .studio-close > p {
+    padding-top: 0;
+  }
+
+  .studio-object-link > span {
+    gap: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio-object-link svg {
+    transition: none;
+  }
+}
