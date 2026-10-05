@@ -10,7 +10,11 @@ Use **Websites & creative tools** as the client-facing label. “Vibe coding” 
 
 ## Brand attitude
 
-**“Wicked taste. Serious craft.”** sets the tone: a strong point of view, sly queer/fashion wit and technical competence. The collaborator’s imagined all-black office, pink fur, black outfits and long pink manicures express the studio’s spirit; they are not claims about real premises, staff or a dress code. “Confident bitches” means assured taste and command of the craft, translated for clients into concrete scope, clear decisions and follow-through. **“A studio with nerve.”**, **“Black room. Pink fur. Sharp minds.”** and **“Long nails. High standards.”** carry that attitude. **“Bring the brief. Bring the obsession.”** makes the invitation generous. Keep service and project facts precise beneath the wit.
+**“Wicked taste. Serious craft.”** sets the opening tone: a strong point of view, sly queer/fashion wit and technical competence. The following introduction gives that confidence a client purpose: films, digital fashion, art and creative tools developed as part of a visual language that belongs to the client. “Selected work.” leads to evidence; “Two practices. One studio.” explains how authored imagery and form meet real-time 3D, generative AI and interactive systems.
+
+**Visuals carry the metaphor; public text adds judgment, process and client value.** The labelled studio concept image establishes the atmosphere. Its adjacent heading, **“A point of view is only the beginning.”**, introduces decisions about what an idea says, how it moves and where it belongs. The paragraphs connect direction and production from early experiments to a usable finished work or handover. The Studio introduction explains where disciplines meet: a visual idea needs a system, a digital form becomes physical, or a tool opens another way to make.
+
+**“CONVICTION. CARRIED THROUGH.”** expresses follow-through. **“Bring the brief. Bring the obsession.”** keeps the invitation open, with a clear statement of what the work takes. Do not explain the office joke or turn visual props into slogans. Keep the concept label and accessibility descriptions factual, and keep service scopes, project credits, navigation and form instructions plain and useful.
 
 ## Observed founder evidence
 

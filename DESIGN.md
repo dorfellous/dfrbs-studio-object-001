@@ -169,7 +169,7 @@ components:
 
 Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.
 
-This is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The user's imagined black office, pink fur and extravagant long pink manicures supply the cultural spirit. “Wicked taste. Serious craft.” introduces the practice; “Long nails. High standards.” states its conviction. The office appears as a labelled daydream concept, with no claim about current premises or staff.
+This is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The concept image carries the studio's visual metaphor; public text adds judgment, process and client value. “Wicked taste. Serious craft.” introduces the practice once, followed by the client-specific visual-language offer. “Selected work.” and “Two practices. One studio.” give the homepage's sections clear roles. “CONVICTION. CARRIED THROUGH.” states the commitment to carrying an idea into finished, usable work.
 
 The source of truth is [atelier.css](src/atelier.css), [studioWebsite.css](src/studioWebsite.css), [services.css](src/services.css), [inquiry.css](src/inquiry.css), [studio.css](src/studio.css) and the matching JSX. [PRODUCT.md](PRODUCT.md), the body contract in [index.html](index.html) and the [complete-studio specification](docs/superpowers/specs/2026-10-05-complete-studio.md) establish the approved scope; the [studio-spirit clarification](docs/superpowers/specs/2026-10-05-studio-spirit.md) records the later voice and accent refinement. The object authority is [Open drawer composition 2](.impeccable/mocks/reinvention-comp-2.png). Tokens above record implemented values; the sidecar carries extensions and preview snippets. Its generated tonal ramps are preview metadata, not additional implemented palette steps.
 
@@ -178,6 +178,7 @@ The source of truth is [atelier.css](src/atelier.css), [studioWebsite.css](src/s
 - Authored founder imagery and films lead.
 - Charcoal, pearl and chrome form the shared material language, with small pink active/hover marks.
 - Confident taste and playful excess are backed by specific decisions, tests and finishing.
+- Visuals carry the metaphor; public text adds judgment, process and client value.
 - Archivo provides expressive headings and readable prose; DM Mono handles compact indexes and technical captions.
 - Artifact plates, ruled rows and native drawers replace rounded cards.
 - Rectangular pale actions remain easy to find beside large images.
@@ -212,7 +213,7 @@ The palette is a warm neutral range with small Studio Pink marks in the wider si
 
 **The Restrained Heat Rule.** HEAT belongs to product imagery and small object-selection states. Keep broad interface backgrounds neutral.
 
-**The Precise Pink Rule.** Use Studio Pink for small studio active and hover marks. Keep the interface's broad surfaces charcoal and pearl; pink fur belongs to the labelled concept image.
+**The Precise Pink Rule.** Use Studio Pink for small studio active and hover marks. Keep the interface's broad surfaces charcoal and pearl; the labelled concept image carries the visual metaphor.
 
 ## Typography
 
@@ -304,9 +305,9 @@ Project media uses contained fit, bounded by its actual dimensions rather than f
 
 ### Studio daydream and manifesto
 
-The StudioAttitude plate pairs the supplied [studio daydream image](public/assets/studio/studio-daydream.webp) with “Black room. Pink fur. Sharp minds.” Its caption explicitly reads “STUDIO DAYDREAM / CONCEPT IMAGE”. The image follows its natural proportions at full column width. A dark square caption overlay (`#111e`) uses DM Mono; copy sits beyond a straight vertical seam, with 15px / 1.8 body text capped at 42ch.
+The StudioAttitude plate pairs the supplied [studio daydream image](public/assets/studio/studio-daydream.webp) with “A point of view is only the beginning.” Its caption explicitly reads “STUDIO DAYDREAM / CONCEPT IMAGE”. The image follows its natural proportions at full column width. A dark square caption overlay (`#111e`) uses DM Mono; copy sits beyond a straight vertical seam, with 15px / 1.8 body text capped at 42ch.
 
-This plate communicates imagined black-office / pink-fur / long-manicure spirit, not current premises, staff or a dress code. Mobile stacks the plate at 740px, moves the seam above the copy and uses 14px body text. The closing Archivo manifesto reads “LONG NAILS. HIGH STANDARDS.” with compact mono support. Its support caption uses Studio Pink on desktop and mobile.
+The image carries the metaphor while the adjacent text explains how an image, question or feeling becomes decisions about meaning, movement and context. Direction and production stay connected so the ambition reaches a finished film, object, experience or system ready to use. The label and accessibility image description remain factual; the copy does not explain the office joke or turn visual props into slogans. Mobile stacks the plate at 740px, moves the seam above the copy and uses 14px body text. The closing Archivo manifesto reads “CONVICTION. CARRIED THROUGH.” with compact mono support, “TASTE / TECHNIQUE / FOLLOW-THROUGH”. Its support caption uses Studio Pink on desktop and mobile.
 
 ### Service drawers
 
@@ -347,7 +348,8 @@ A global reduced-motion rule removes all animations/transitions and uses immedia
 - **Do** reuse the supplied wordmark, authored founder work, campaign films and accurate object assets.
 - **Do** use charcoal/pearl surfaces, square actions and straight seams as the shared interface language.
 - **Do** retain the separate individual-credit metadata beside portfolio imagery.
-- **Do** label the studio daydream as a concept image and keep taste-and-craft voice distinct from plain navigation, service scope and form instructions.
+- **Do** label the studio daydream as a concept image; let visuals carry the metaphor while public text adds judgment, process and client value.
+- **Do** keep navigation, service scope, credits and form instructions plain and useful.
 - **Do** adapt layout to the surface: image archive, credited dossier, service drawer or reviewable brief.
 - **Do** preserve contained artifact/project-media fitting and deliberate editorial cropping.
 - **Do** retain native controls, visible focus, keyboard selection, focus-managed dialogs and reduced-motion behaviour.
@@ -360,4 +362,5 @@ A global reduced-motion rule removes all animations/transitions and uses immedia
 - **Don't** stretch, redraw or crop away defining object anatomy.
 - **Don't** substitute stock imagery or describe selected-work images as founder portraits.
 - **Don't** describe the studio daydream as actual premises, staff or a dress code.
+- **Don't** explain the office joke in marketing copy or use visual props as slogans.
 - **Don't** present local brief preparation or the object bag as completed server submission, payment or inventory.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-05T05:42:43.272Z",
+  "generatedAt": "2026-10-05T05:53:43.190Z",
   "title": "Design System: DFRBS Studio",
   "extensions": {
     "colorMeta": {
@@ -498,11 +498,12 @@
   ],
   "narrative": {
     "northStar": "The open studio drawer",
-    "overview": "Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.\n\nThis is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The user's imagined black office, pink fur and extravagant long pink manicures supply the cultural spirit. “Wicked taste. Serious craft.” introduces the practice; “Long nails. High standards.” states its conviction. The office appears as a labelled daydream concept, with no claim about current premises or staff.",
+    "overview": "Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.\n\nThis is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The concept image carries the studio's visual metaphor; public text adds judgment, process and client value. “Wicked taste. Serious craft.” introduces the practice once, followed by the client-specific visual-language offer. “Selected work.” and “Two practices. One studio.” give the homepage's sections clear roles. “CONVICTION. CARRIED THROUGH.” states the commitment to carrying an idea into finished, usable work.",
     "keyCharacteristics": [
       "Authored founder imagery and films lead.",
       "Charcoal, pearl and chrome form the shared material language, with small pink active/hover marks.",
       "Confident taste and playful excess are backed by specific decisions, tests and finishing.",
+      "Visuals carry the metaphor; public text adds judgment, process and client value.",
       "Archivo provides expressive headings and readable prose; DM Mono handles compact indexes and technical captions.",
       "Artifact plates, ruled rows and native drawers replace rounded cards.",
       "Rectangular pale actions remain easy to find beside large images.",
@@ -516,7 +517,7 @@
       },
       {
         "name": "The Precise Pink Rule",
-        "body": "Use Studio Pink for small studio active and hover marks. Keep the interface's broad surfaces charcoal and pearl; pink fur belongs to the labelled concept image.",
+        "body": "Use Studio Pink for small studio active and hover marks. Keep the interface's broad surfaces charcoal and pearl; the labelled concept image carries the visual metaphor.",
         "section": "colors"
       },
       {
@@ -539,7 +540,8 @@
       "Do reuse the supplied wordmark, authored founder work, campaign films and accurate object assets.",
       "Do use charcoal/pearl surfaces, square actions and straight seams as the shared interface language.",
       "Do retain the separate individual-credit metadata beside portfolio imagery.",
-      "Do label the studio daydream as a concept image and keep taste-and-craft voice distinct from plain navigation, service scope and form instructions.",
+      "Do label the studio daydream as a concept image; let visuals carry the metaphor while public text adds judgment, process and client value.",
+      "Do keep navigation, service scope, credits and form instructions plain and useful.",
       "Do adapt layout to the surface: image archive, credited dossier, service drawer or reviewable brief.",
       "Do preserve contained artifact/project-media fitting and deliberate editorial cropping.",
       "Do retain native controls, visible focus, keyboard selection, focus-managed dialogs and reduced-motion behaviour."
@@ -551,6 +553,7 @@
       "Don't stretch, redraw or crop away defining object anatomy.",
       "Don't substitute stock imagery or describe selected-work images as founder portraits.",
       "Don't describe the studio daydream as actual premises, staff or a dress code.",
+      "Don't explain the office joke in marketing copy or use visual props as slogans.",
       "Don't present local brief preparation or the object bag as completed server submission, payment or inventory."
     ]
   }
