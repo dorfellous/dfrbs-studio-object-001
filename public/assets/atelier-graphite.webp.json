@@ -1,0 +1,37 @@
+{
+  "prompt": "Generate this final production background at native high resolution 3072 × 2304 pixels (4:3 landscape), minimum 2400 × 1800 pixels. Use case: photorealistic-natural. Asset type: unobtrusive dark graphite atelier table surface material for a luxury sculptural object website.\nA perfectly flat, edge-to-edge single continuous near-black neutral graphite surface fills the entire image. The camera is perpendicular to the surface, no perspective, no depth, no horizon or table edges. Uniformly dark neutral #141414 overall, with exceptionally subtle low-contrast matte microscopic grain and gentle natural unevenness. The fine tactile texture is almost invisible at normal viewing size. Broad entirely diffuse illumination, no directional light, no highlights or shadows, and equally dark from center to edges.\nThis is ONLY material. No products, eyewear, objects, logos, text, letters, numbers, graphics, seams, scratches, dust, fingerprints, creases, wrinkles, designs, gradients, spotlight, glow, vignette, reflections, or cast shadows. No large mottling. No upscaled small image. Create a large original material texture.",
+  "createdAt": "2026-10-05T05:00:38.509936+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "mode": "generate",
+  "useCase": "photorealistic-natural",
+  "role": "non-semantic background material",
+  "asset": "public/assets/atelier-graphite.webp",
+  "width": 1448,
+  "height": 1086,
+  "bytes": 108242,
+  "sha256": "436f5a055d039e78ee73cab36176ea2c71dc61f8f8eff20512fcf6715c84ccd2",
+  "format": "WEBP",
+  "conversion": "WebP quality 84; original native dimensions preserved",
+  "requestedNativeDimensions": [
+    3072,
+    2304
+  ],
+  "minimumRequestedDimensions": [
+    2400,
+    1800
+  ],
+  "limitation": "Built-in tool returned 1448 x 1086 in both generation attempts and exposes no size parameter. Native output preserved.",
+  "meanRgb": [
+    31.796858307133483,
+    31.696802855020707,
+    30.588052486187845
+  ],
+  "standardDeviationRgb": [
+    3.9321018120925344,
+    4.167235636145,
+    3.7904176336174187
+  ],
+  "validation": "Inspected generated output: unobtrusive fine matte grain, no products, text, logos, shadows, horizons, perspective or vignette.",
+  "promptEmbedding": "Impeccable embed-prompt.mjs WebP sidecar fallback",
+  "sourceGenerationId": "01a10a6d-7d62-78a3-bd3a-69c4b99289e3"
+}
