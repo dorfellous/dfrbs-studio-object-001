@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-05T05:53:43.190Z",
+  "generatedAt": "2026-10-05T05:59:53.964Z",
   "title": "Design System: DFRBS Studio",
   "extensions": {
     "colorMeta": {
@@ -328,7 +328,7 @@
       },
       "title": {
         "displayName": "Work title",
-        "purpose": "Separate title and founder-credit row beneath each image."
+        "purpose": "Separate project-title, discipline and year row beneath each image."
       },
       "body": {
         "displayName": "Body",
@@ -477,7 +477,7 @@
       "name": "Service drawer",
       "kind": "custom",
       "refersTo": "service-drawer-summary",
-      "description": "Native disclosure with numbered heading, summary and rotating plus; production content adds scope, delivery, evidence and actions.",
+      "description": "Native disclosure with numbered heading, summary and rotating plus; production content adds scope, delivery, local project-led RELATED WORK and actions.",
       "html": "<details class=\"ds-drawer\" name=\"ds-services\"><summary><span class=\"ds-number\">01</span><h2>Films & moving image</h2><span class=\"ds-description\">Campaigns, music and authored moving image.</span><svg class=\"ds-toggle\" width=\"29\" height=\"29\" viewBox=\"0 0 256 256\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"12\" aria-hidden=\"true\"><path d=\"M40 128h176M128 40v176\"/></svg></summary><div class=\"ds-scope\"><h3>THE SCOPE</h3><p>Creative direction, production and finishing.</p></div></details>",
       "css": ".ds-drawer{border-bottom:1px solid var(--rule,#53534f);color:var(--paper,#e5e2db);font-family:Archivo,sans-serif}.ds-drawer summary{display:grid;grid-template-columns:75px minmax(0,1.2fr) minmax(0,1fr) 29px;gap:30px;align-items:center;min-height:125px;padding:26px clamp(20px,3vw,46px);list-style:none;cursor:pointer;transition:background 180ms ease-out}.ds-drawer summary::-webkit-details-marker{display:none}.ds-drawer summary:hover,.ds-drawer[open]>summary{background:#1a1a18}.ds-number{color:#97978f;font-size:53px;font-weight:900;line-height:1;letter-spacing:-.04em}.ds-drawer h2{margin:0;font-size:clamp(25px,2.7vw,41px);font-weight:800;line-height:1.1;letter-spacing:-.025em}.ds-description{max-width:34ch;color:var(--muted,#a7a59f);font-size:14px;line-height:1.5}.ds-toggle{transition:transform 180ms ease-out}.ds-drawer[open] .ds-toggle{transform:rotate(45deg)}.ds-drawer summary:focus-visible{outline:2px solid var(--paper,#e5e2db);outline-offset:-5px}.ds-scope{margin-left:calc(clamp(20px,3vw,46px) + 105px);margin-right:clamp(20px,3vw,46px);border-top:1px solid var(--rule,#53534f);padding:37px 0 35px}.ds-scope h3{margin:0 0 13px;font-family:var(--mono,\"DM Mono\",monospace);font-size:10px;font-weight:400;line-height:1.5;letter-spacing:.1em;color:var(--muted,#a7a59f)}.ds-scope p{margin:0;font-size:14px;line-height:1.55}@media(max-width:760px){.ds-drawer summary{grid-template-columns:45px minmax(0,1fr) 25px;gap:17px;min-height:124px;padding-top:23px;padding-bottom:24px}.ds-number{align-self:start;font-size:34px;padding-top:3px}.ds-drawer h2{font-size:clamp(23px,5.25vw,36px);line-height:1.12}.ds-description{grid-column:2;font-size:12px;margin-top:-5px}.ds-toggle{grid-column:3;grid-row:1;align-self:start;width:25px;margin-top:3px}.ds-scope{margin-left:clamp(20px,3vw,46px)}}@media(prefers-reduced-motion:reduce){.ds-drawer summary,.ds-toggle{transition:none}}"
     },
@@ -498,9 +498,10 @@
   ],
   "narrative": {
     "northStar": "The open studio drawer",
-    "overview": "Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.\n\nThis is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The concept image carries the studio's visual metaphor; public text adds judgment, process and client value. “Wicked taste. Serious craft.” introduces the practice once, followed by the client-specific visual-language offer. “Selected work.” and “Two practices. One studio.” give the homepage's sections clear roles. “CONVICTION. CARRIED THROUGH.” states the commitment to carrying an idea into finished, usable work.",
+    "overview": "Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for DFRBS Studio's authored work. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.\n\nThis is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground projects and disciplines, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The concept image carries the studio's visual metaphor; public text adds judgment, process and client value. “Wicked taste. Serious craft.” introduces the practice once, followed by the client-specific visual-language offer. “Selected work.” and “Image, form & technology.” give the homepage's sections clear roles. DFRBS presents one shared portfolio; original authorship stays in secondary project-detail credits. “CONVICTION. CARRIED THROUGH.” states the commitment to carrying an idea into finished, usable work.",
     "keyCharacteristics": [
-      "Authored founder imagery and films lead.",
+      "Authored project imagery and films lead.",
+      "One studio presents projects and disciplines; original credits remain secondary dossier metadata.",
       "Charcoal, pearl and chrome form the shared material language, with small pink active/hover marks.",
       "Confident taste and playful excess are backed by specific decisions, tests and finishing.",
       "Visuals carry the metaphor; public text adds judgment, process and client value.",
@@ -534,12 +535,17 @@
         "name": "The Complete Silhouette Rule",
         "body": "Preserve the four-lens eyewear and the lighter sleeve anatomy. Use the real assets and their established fitting behaviour; never stretch an artifact to fill a plate.",
         "section": "shapes"
+      },
+      {
+        "name": "The Shared Portfolio Rule",
+        "body": "Present one DFRBS portfolio led by project and discipline. Keep original authorship in secondary project details rather than a name–project heading or separate personal-portfolio destination.",
+        "section": "components"
       }
     ],
     "dos": [
-      "Do reuse the supplied wordmark, authored founder work, campaign films and accurate object assets.",
+      "Do reuse the supplied wordmark, authored project work, campaign films and accurate object assets.",
       "Do use charcoal/pearl surfaces, square actions and straight seams as the shared interface language.",
-      "Do retain the separate individual-credit metadata beside portfolio imagery.",
+      "Do lead with project and discipline, and retain original credits as secondary metadata in project details.",
       "Do label the studio daydream as a concept image; let visuals carry the metaphor while public text adds judgment, process and client value.",
       "Do keep navigation, service scope, credits and form instructions plain and useful.",
       "Do adapt layout to the surface: image archive, credited dossier, service drawer or reviewable brief.",
@@ -551,7 +557,8 @@
       "Don't introduce rounded cards, pill filters, broad HEAT or Studio Pink backgrounds, or decorative interface gradients.",
       "Don't turn the homepage's 62% / 38% split into a mandatory layout for every page.",
       "Don't stretch, redraw or crop away defining object anatomy.",
-      "Don't substitute stock imagery or describe selected-work images as founder portraits.",
+      "Don't substitute stock imagery or describe selected-work images as portraits.",
+      "Don't split the shared portfolio into personal-practice bios, name–project headings or personal portfolio calls to action.",
       "Don't describe the studio daydream as actual premises, staff or a dress code.",
       "Don't explain the office joke in marketing copy or use visual props as slogans.",
       "Don't present local brief preparation or the object bag as completed server submission, payment or inventory."

@@ -10,8 +10,8 @@ export const SERVICES = [
     fit: "Brands developing a campaign; artists releasing music; teams creating live-show visuals.",
     inputs: "Your brief, audience, brand assets or music, visual references and intended viewing formats.",
     proofLinks: [
-      { label: "Ran Bensimon — Bring Your Love", url: "https://ranbensimon.com/offer-nissim-bring-your-love/" },
-      { label: "Dor Fellous — AI films", url: "https://dor-fellous-portfolio.drktch.chatgpt.site/" },
+      { label: "Bring Your Love", project: "ran-bring-your-love" },
+      { label: "AI Film Study", project: "dor-ai-film" },
     ],
   },
   {
@@ -25,8 +25,9 @@ export const SERVICES = [
     fit: "Fashion and accessory brands; artists developing a character or world; cultural projects exploring digital and physical form.",
     inputs: "References, a use case, existing designs or assets, and any physical dimensions or production constraints.",
     proofLinks: [
-      { label: "Ran Bensimon — 3D Garments", url: "https://ranbensimon.com/3d-garments/" },
-      { label: "Dor Fellous — wearable objects", url: "https://dorfellous.github.io/WEBSITE-/" },
+      { label: "Digital Fashion Study", project: "dor-digital-fashion" },
+      { label: "Object 001 — Eyewear", project: "dor-object-001" },
+      { label: "Omer Adam Live Show", project: "ran-omer-adam" },
     ],
   },
   {
@@ -40,8 +41,7 @@ export const SERVICES = [
     fit: "Brands launching a campaign; artists presenting a practice; cultural organisations opening an experience to an audience.",
     inputs: "The audience and task, your content and assets, examples you respond to, and any hosting or integration requirements.",
     proofLinks: [
-      { label: "Ran Bensimon — Neon Dojo", url: "https://ranbensimon.com/neon-dojo-fight/" },
-      { label: "Ran Bensimon — YouTube Ad Extractor", url: "https://ranbensimon.com/youtube-ad-extractor/" },
+      { label: "Neon Dojo", project: "ran-neon-dojo" },
     ],
   },
   {
@@ -55,7 +55,7 @@ export const SERVICES = [
     fit: "Creative studios, brand content teams and cultural production teams working with repeated image or video tasks.",
     inputs: "A representative task, sample source material, the current tool setup and the decisions the team needs to control.",
     proofLinks: [
-      { label: "Ran Bensimon — 3D to stylized-video workflow", url: "https://ranbensimon.com/ltx-ic-lora-keyframes/" },
+      { label: "3D → Stylized", project: "ran-ltx" },
     ],
   },
   {
@@ -69,8 +69,8 @@ export const SERVICES = [
     fit: "Artists, curators, cultural organisations and brands commissioning an authored experience.",
     inputs: "The artistic question, the audience and setting, any collaborators, and the space or screen constraints.",
     proofLinks: [
-      { label: "Ran Bensimon — Ad Astra", url: "https://ranbensimon.com/ad-astra/" },
-      { label: "Dor Fellous — digital fashion and wearable art", url: "https://dor-fellous-portfolio.drktch.chatgpt.site/" },
+      { label: "Ad Astra", project: "ran-ad-astra" },
+      { label: "Object 001 — Eyewear", project: "dor-object-001" },
     ],
   },
   {
@@ -84,7 +84,7 @@ export const SERVICES = [
     fit: "Brand and studio teams, artists, cultural organisations and creative-education groups.",
     inputs: "The team's experience, the questions they want to explore, available tools and a useful sample task.",
     proofLinks: [
-      { label: "Ran Bensimon — tutorials and lectures", url: "https://ranbensimon.com/tutorials-and-lectures/" },
+      { label: "Workflow breakdown", project: "ran-ltx" },
     ],
   },
 ];

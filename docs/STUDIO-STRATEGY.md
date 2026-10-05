@@ -10,18 +10,18 @@ Use **Websites & creative tools** as the client-facing label. “Vibe coding” 
 
 ## Brand attitude
 
-**“Wicked taste. Serious craft.”** sets the opening tone: a strong point of view, sly queer/fashion wit and technical competence. The following introduction gives that confidence a client purpose: films, digital fashion, art and creative tools developed as part of a visual language that belongs to the client. “Selected work.” leads to evidence; “Two practices. One studio.” explains how authored imagery and form meet real-time 3D, generative AI and interactive systems.
+**“Wicked taste. Serious craft.”** sets the opening tone: a strong point of view, sly queer/fashion wit and technical competence. The following introduction gives that confidence a client purpose: films, digital fashion, art and creative tools developed as part of a visual language that belongs to the client. “Selected work.” leads to evidence; “Image, form & technology.” presents filmmaking, digital fashion, real-time 3D, generative AI and interactive systems as one studio practice.
 
 **Visuals carry the metaphor; public text adds judgment, process and client value.** The labelled studio concept image establishes the atmosphere. Its adjacent heading, **“A point of view is only the beginning.”**, introduces decisions about what an idea says, how it moves and where it belongs. The paragraphs connect direction and production from early experiments to a usable finished work or handover. The Studio introduction explains where disciplines meet: a visual idea needs a system, a digital form becomes physical, or a tool opens another way to make.
 
 **“CONVICTION. CARRIED THROUGH.”** expresses follow-through. **“Bring the brief. Bring the obsession.”** keeps the invitation open, with a clear statement of what the work takes. Do not explain the office joke or turn visual props into slogans. Keep the concept label and accessibility descriptions factual, and keep service scopes, project credits, navigation and form instructions plain and useful.
 
-## Observed founder evidence
+## Evidence behind the shared practice
 
-- **Ran Bensimon:** real-time 3D, generative AI, film and performance visuals, workflow engineering, browser projects and teaching. [Portfolio](https://ranbensimon.com/), [Neon Dojo](https://ranbensimon.com/neon-dojo-fight/), [tutorials and lectures](https://ranbensimon.com/tutorials-and-lectures/).
-- **Dor Fellous:** AI films, digital fashion, direction and concept; photographed printed accessories and a published modeling/printing/finishing process. [Selected work](https://dor-fellous-portfolio.drktch.chatgpt.site/), [SYMBIOT BLADE](https://dorfellous.github.io/WEBSITE-/accessories/symbiot-blade), [Dor’s process account](https://www.linkedin.com/posts/dor-fellous-397a761a8_3dprinting-productdesign-activity-7479886890314240000-L2ZL).
+- **Motion, real-time 3D and creative systems:** generative AI, film and performance visuals, workflow engineering, browser projects and teaching. [Published evidence](https://ranbensimon.com/), [Neon Dojo](https://ranbensimon.com/neon-dojo-fight/), [tutorials and lectures](https://ranbensimon.com/tutorials-and-lectures/). Original credited practice: Ran Bensimon.
+- **Film, digital fashion and wearable form:** direction and concept, photographed printed accessories and a published modeling/printing/finishing process. [Published evidence](https://dor-fellous-portfolio.drktch.chatgpt.site/), [SYMBIOT BLADE](https://dorfellous.github.io/WEBSITE-/accessories/symbiot-blade), [published process account](https://www.linkedin.com/posts/dor-fellous-397a761a8_3dprinting-productdesign-activity-7479886890314240000-L2ZL). Original credited practice: Dor Fellous.
 
-Proposed complement: connect authored imagery and sculptural form with motion, real-time scenes, working interfaces and reusable production methods. Both have creative-direction evidence; select leads and agree credits per project rather than assigning rigid artistic/technical roles.
+The shared practice connects authored imagery and sculptural form with motion, real-time scenes, working interfaces and reusable production methods. Both founders have creative-direction evidence; select leads and agree credits per project rather than assigning rigid artistic/technical roles. Public presentation remains one DFRBS portfolio, not two personal-practice branches.
 
 ## Six proposed offers
 
@@ -57,7 +57,9 @@ Every proposal should define outcome/audience; supplied inputs and decision-make
 
 ## Website and conversion
 
-Use **Home → relevant Work → Services → Start a project**, with **Studio** explaining the founders and **Objects** retaining the sculptural practice. Preserve the dark/chrome atelier world and visible drawers. Each case study needs founder, role, outputs, collaborators, source and commission/research/study status.
+Use **Home → relevant Work → Services → Start a project**, with **Studio** presenting **“A shared direction.”** and **Objects** retaining the sculptural practice. Preserve the dark/chrome atelier world and visible drawers. The Studio section gives one joint introduction above paired work imagery, with no separate founder bios or personal portfolio calls to action.
+
+**Project and discipline lead; the studio stays unified; original credits remain secondary in project details.** Hero labels, archive tiles and project headings use project/discipline labels, including **BRING YOUR LOVE** and **FUTURO**, without a name–project structure. Dossiers retain contribution, outputs, collaborators, tools/methods, **ORIGINAL CREDIT**, a **PROJECT SOURCE** link and commission/research/study status. Original artist facts stay in narratives. The six service drawers use **RELATED WORK**, with ten project-led references into local dossiers instead of personal-practice links.
 
 The brief asks for name/email, service or “not sure”, idea and optional timing/budget/links. The current flow prepares a local review and email draft; the client sends it through their email app. Verified destination: [info@ranbensimon.com](mailto:info@ranbensimon.com), sourced from [Ran’s portfolio](https://ranbensimon.com/).
 

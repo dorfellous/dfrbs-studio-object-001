@@ -8,14 +8,14 @@ web
 
 ## Product Purpose
 
-A complete creative studio website for the proposed shared practice of Ran Bensimon and Dor Fellous. Help brands, artists and cultural organisations understand the offer, see relevant individually credited work and start a commission.
+A complete creative studio website for the proposed shared practice of Ran Bensimon and Dor Fellous. Help brands, artists and cultural organisations understand one studio offer, explore a unified project archive and start a commission.
 
 ## Capabilities and Constraints
 
-- Home, filterable work archive, nine project dossiers, six detailed service offers, founder profiles and process, project brief builder.
+- Home, unified filterable work archive, nine project dossiers, six detailed service offers, joint studio introduction and process, project brief builder.
 - The brief is reviewed locally, then copied or opened as an email draft to the verified public contact info@ranbensimon.com. No server submission or “sent” state.
 - Query routes preserve direct links and Back/Forward on GitHub Pages. Original objects remain at ?object=000, 001 and 002.
-- Earlier commissions retain individual practice and collaborator credits. Descriptive Dor study labels carry no invented date, tool stack or commercial result.
+- Projects lead with titles and disciplines; service evidence links to shared project dossiers, and the studio has one joint introduction. Earlier commissions retain accurate authorship, contribution, collaborators and source as secondary project metadata. Descriptive Dor study labels carry no invented date, tool stack or commercial result.
 - OBJECT 001: exact supplied four-lens eyewear, $1,500, BLACK / PEARL / HEAT. OBJECT 002: removable Clipper lighter sleeve, $420, “3D PRINTED LIGHTER CASE.”
 - Object bag supports local quantities, removal and totals; no inventory, persistence or payment backend.
 - Genuine portfolio images and films lead. Preserve object geometry, campaign film and supplied wordmark.

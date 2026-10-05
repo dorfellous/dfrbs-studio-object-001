@@ -33,10 +33,14 @@ export function ServicesPage({ onNavigate, initialService = "all" }) {
                   <ul>{service.scope.map((item) => <li key={item}>{item}</li>)}</ul>
                 </div>
                 <div className="services-proof">
-                  <h3>RELATED WORK BY THE FOUNDERS</h3>
+                  <h3>RELATED WORK</h3>
                   <div>
                     {service.proofLinks.map((link) => (
-                      <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer">
+                      <a key={link.project} href={`${import.meta.env.BASE_URL}?project=${encodeURIComponent(link.project)}`} onClick={(event) => {
+                        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                        event.preventDefault();
+                        onNavigate("project", { project: link.project });
+                      }}>
                         <span>{link.label}</span>
                         <ArrowUpRight size={17} weight="light" aria-hidden="true" />
                       </a>

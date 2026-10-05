@@ -167,15 +167,16 @@ components:
 
 **Creative North Star: "The open studio drawer"**
 
-Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for the actual work of Ran Bensimon and Dor Fellous. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.
+Authored images and working creative systems share one studio. Charcoal, pearl, the supplied chrome wordmark and strong Archivo type create a restrained frame for DFRBS Studio's authored work. Colour comes primarily from the work itself; flat artifact plates, fine drawer seams and rectangular actions carry the interface. The studio has nerve: confident taste, queer/fashion wit and playful excess backed by serious craft. Small pink marks express that attitude within the charcoal/chrome frame.
 
-This is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground individually credited artifacts, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The concept image carries the studio's visual metaphor; public text adds judgment, process and client value. “Wicked taste. Serious craft.” introduces the practice once, followed by the client-specific visual-language offer. “Selected work.” and “Two practices. One studio.” give the homepage's sections clear roles. “CONVICTION. CARRIED THROUGH.” states the commitment to carrying an idea into finished, usable work.
+This is the built system after the approved Open drawer composition 2 reinvention and its expansion into a complete joint creative studio. It replaces the earlier campaign refinement. The homepage introduces the practice, work pages foreground projects and disciplines, services disclose their scope in drawers, and the project brief uses a quieter form layout. Shared materials and controls connect those surfaces; their composition follows their purpose. The concept image carries the studio's visual metaphor; public text adds judgment, process and client value. “Wicked taste. Serious craft.” introduces the practice once, followed by the client-specific visual-language offer. “Selected work.” and “Image, form & technology.” give the homepage's sections clear roles. DFRBS presents one shared portfolio; original authorship stays in secondary project-detail credits. “CONVICTION. CARRIED THROUGH.” states the commitment to carrying an idea into finished, usable work.
 
 The source of truth is [atelier.css](src/atelier.css), [studioWebsite.css](src/studioWebsite.css), [services.css](src/services.css), [inquiry.css](src/inquiry.css), [studio.css](src/studio.css) and the matching JSX. [PRODUCT.md](PRODUCT.md), the body contract in [index.html](index.html) and the [complete-studio specification](docs/superpowers/specs/2026-10-05-complete-studio.md) establish the approved scope; the [studio-spirit clarification](docs/superpowers/specs/2026-10-05-studio-spirit.md) records the later voice and accent refinement. The object authority is [Open drawer composition 2](.impeccable/mocks/reinvention-comp-2.png). Tokens above record implemented values; the sidecar carries extensions and preview snippets. Its generated tonal ramps are preview metadata, not additional implemented palette steps.
 
 **Key Characteristics:**
 
-- Authored founder imagery and films lead.
+- Authored project imagery and films lead.
+- One studio presents projects and disciplines; original credits remain secondary dossier metadata.
 - Charcoal, pearl and chrome form the shared material language, with small pink active/hover marks.
 - Confident taste and playful excess are backed by specific decisions, tests and finishing.
 - Visuals carry the metaphor; public text adds judgment, process and client value.
@@ -201,7 +202,7 @@ The palette is a warm neutral range with small Studio Pink marks in the wider si
 
 - **Charcoal:** Page, sticky navigation, order slip and control backgrounds.
 - **Inspection, Drawer, Film and Dossier:** Small tonal shifts distinguish media plates, bag contents and project media without card elevation.
-- **Muted:** Descriptions, individual credits, technical captions and secondary context.
+- **Muted:** Descriptions, original-credit metadata, technical captions and secondary context.
 - **Seam:** Straight section dividers, row boundaries and secondary-action rules.
 - **White:** Hover brightening and readable labels over authored media.
 - **Ghost:** Low-contrast oversized numerals and marks belong to the object archive and its 000 studio dossier.
@@ -241,10 +242,10 @@ The system uses full-width sections and asymmetrical grids separated by one-pixe
 | Surface | Built composition |
 | --- | --- |
 | Homepage | A 62% authored-media plate and 38% introduction/action panel, minimum height 660px. Media has its own bottom selector rail. Practice index has three ruled columns. Selected work uses two columns. |
-| Work archive | Page introduction, horizontal underlined filters, then a two-column artifact grid with separate image and credit metadata. |
+| Work archive | Page introduction, horizontal underlined filters, then a two-column artifact grid with separate image, project title, discipline and year metadata. |
 | Project dossier | Wide contained media, then a 1.25fr / 1fr explanation-and-credit grid. Embedded film players use 16:9. |
 | Services | A 1.35fr / 1fr introduction, six numbered native disclosure drawers, and expanded scope/delivery columns at 1.45fr / 1fr. |
-| Joint studio | A 56% / 44% concept-image/attitude plate, then two founder work-image/profile columns, a 1fr / 1.15fr process section and a large typographic statement. These are work images, not founder portraits. |
+| Joint studio | A 56% / 44% concept-image/attitude plate, then one shared-practice introduction with 1.2fr / 1fr heading/copy above paired work imagery, a 1fr / 1.15fr process section and a large typographic statement. These are project images. |
 | Project brief | A 1.25fr / .75fr introduction, then a narrow supporting aside beside a broad form at .7fr / 1.6fr. Paired fields use two columns; the reviewed brief follows the form. |
 | Objects 001 / 002 | A 67.2% inspection plate and 32.8% order slip, minimum height 690px. Cabinet rows provide onward navigation; campaign chapters use their own split grids. |
 | Archived studio 000 | Statement/office plate at 1.6fr / 1fr; boardroom/copy at 1.85fr / 1fr. It retains its office and boardroom imagery within the current material world. |
@@ -257,7 +258,7 @@ The wide studio header is sticky, minimum height 76px, with brand, navigation an
 | 1100px and below | Homepage opening becomes 58% / 42%; object inspection becomes 62% / 38%. Headers and gaps tighten. |
 | 1080px and below | Service drawer number/title/copy columns tighten and expanded content indents reduce. |
 | 1050px and below | Inquiry and archived studio layouts tighten independently. The inquiry submit row becomes vertical. |
-| 760px and below | Headers become two rows with visible navigation. Homepage identity/action comes before its media plate. Work and founder grids, dossiers, service content and brief fields become single-column. Inquiry aside comes before the form. Object inspection comes before ordering; the order photograph follows the controls. Gutters are predominantly 20px. |
+| 760px and below | Headers become two rows with visible navigation. Homepage identity/action comes before its media plate. Work grids, shared-practice heading/copy and paired imagery, dossiers, service content and brief fields become single-column. Inquiry aside comes before the form. Object inspection comes before ordering; the order photograph follows the controls. Gutters are predominantly 20px. |
 | 740px and below | Studio daydream plate stacks; its copy loses the left seam and gains a top seam. |
 | 360px and below | Object header and cabinet gutters become 14px and archive labels tighten. |
 
@@ -299,9 +300,17 @@ Work filters are text links with an active Studio Pink bottom rule and `aria-cur
 
 ### Artifact plates and work tiles
 
-Work tiles have an image plate, a square bottom-right arrow tab and a separate title/individual-credit row. There is no enclosing card border, rounding or shadow. Desktop image aspect ratio is 1.45, mobile 1.2. Editorial images cover; object images contain. Hover image scale is 1.035, so the artifact remains the dominant content.
+Work tiles have an image plate, a square bottom-right arrow tab and a separate project-title/discipline/year row. There is no enclosing card border, rounding or shadow. Desktop image aspect ratio is 1.45, mobile 1.2. Editorial images cover; object images contain. Hover image scale is 1.035, so the artifact remains the dominant content.
 
-Project media uses contained fit, bounded by its actual dimensions rather than forcing every work into an archive crop. Founder profile images are selected work with descriptive alt text and individual portfolio links.
+Project media uses contained fit, bounded by its actual dimensions rather than forcing every work into an archive crop. Hero media labels, archive tiles and project headings lead with the project or discipline. Contribution, outputs, collaborators, tools and methods appear in the dossier, with ORIGINAL CREDIT as secondary metadata and a PROJECT SOURCE link preserving provenance. BRING YOUR LOVE and FUTURO use concise project labels; original artist facts remain in the narratives.
+
+**The Shared Portfolio Rule.** Present one DFRBS portfolio led by project and discipline. Keep original authorship in secondary project details rather than a name–project heading or separate personal-portfolio destination.
+
+### Shared studio practice
+
+StudioPractice is one joint introduction headed “A shared direction.” It explains that concept, image-making and technical development share a single process, identifies Ran Bensimon and Dor Fellous as founders in supporting copy, and shows paired selected-work imagery. There are no separate founder bios or personal portfolio calls to action.
+
+The heading/copy uses 1.2fr / 1fr columns with a 70px gap, above a two-column image grid with a 24px gap. Images use a 1.3 aspect ratio and cover fit. The section uses 80px vertical padding. At 760px both grids stack, copy gap becomes 28px, image gap 20px, and section padding becomes 48px / 20px.
 
 ### Studio daydream and manifesto
 
@@ -313,7 +322,7 @@ The image carries the metaphor while the adjacent text explains how an image, qu
 
 Native `details` / `summary` disclosures form six full-width numbered rows. The default route opens the first; a linked service opens its matching row. Their shared `name` establishes a single-open group. The expanded state changes the row tone and rotates the plus icon 45 degrees.
 
-Expanded content separates scope and related founder work from outputs, client fit and starting inputs. Actions sit below a straight seam. Mobile places summary copy below the title, collapses content to one column and replaces the delivery column's left border with a top border. Keyboard focus is an inset Pearl outline.
+Expanded content separates scope and RELATED WORK from outputs, client fit and starting inputs. Ten project-led related-work references across the six offers open local project dossiers, retaining the unified studio journey; original sources and credits stay inside those dossiers. Actions sit below a straight seam. Mobile places summary copy below the title, collapses content to one column and replaces the delivery column's left border with a top border. Keyboard focus is an inset Pearl outline.
 
 ### Brief inputs and review
 
@@ -345,9 +354,9 @@ A global reduced-motion rule removes all animations/transitions and uses immedia
 
 ### Do:
 
-- **Do** reuse the supplied wordmark, authored founder work, campaign films and accurate object assets.
+- **Do** reuse the supplied wordmark, authored project work, campaign films and accurate object assets.
 - **Do** use charcoal/pearl surfaces, square actions and straight seams as the shared interface language.
-- **Do** retain the separate individual-credit metadata beside portfolio imagery.
+- **Do** lead with project and discipline, and retain original credits as secondary metadata in project details.
 - **Do** label the studio daydream as a concept image; let visuals carry the metaphor while public text adds judgment, process and client value.
 - **Do** keep navigation, service scope, credits and form instructions plain and useful.
 - **Do** adapt layout to the surface: image archive, credited dossier, service drawer or reviewable brief.
@@ -360,7 +369,8 @@ A global reduced-motion rule removes all animations/transitions and uses immedia
 - **Don't** introduce rounded cards, pill filters, broad HEAT or Studio Pink backgrounds, or decorative interface gradients.
 - **Don't** turn the homepage's 62% / 38% split into a mandatory layout for every page.
 - **Don't** stretch, redraw or crop away defining object anatomy.
-- **Don't** substitute stock imagery or describe selected-work images as founder portraits.
+- **Don't** substitute stock imagery or describe selected-work images as portraits.
+- **Don't** split the shared portfolio into personal-practice bios, name–project headings or personal portfolio calls to action.
 - **Don't** describe the studio daydream as actual premises, staff or a dress code.
 - **Don't** explain the office joke in marketing copy or use visual props as slogans.
 - **Don't** present local brief preparation or the object bag as completed server submission, payment or inventory.

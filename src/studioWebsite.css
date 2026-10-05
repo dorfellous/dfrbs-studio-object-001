@@ -104,12 +104,13 @@
 .studio-project-dossier dd { margin: 0; font-size: 13px; line-height: 1.8; }
 .studio-related-services { display: flex; align-items: center; justify-content: start; flex-wrap: wrap; gap: 30px; padding: 45px var(--studio-pad); border-bottom: 1px solid var(--rule); }
 .studio-related-services h2 { font-size: 25px; letter-spacing: -.02em; font-weight: 500; margin-right: auto; }
-.studio-founders { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 40px; padding: 40px var(--studio-pad) 75px; border-bottom: 1px solid var(--rule); }
-.studio-founder-image { aspect-ratio: 1.3; background: #191919; overflow: hidden; }
-.studio-founder-image img { height: 100%; width: 100%; object-fit: cover; }
-.studio-founder h2 { font-size: 38px; font-weight: 800; letter-spacing: -.02em; margin: 28px 0 12px; }
-.studio-founder > p { font-size: 15px; line-height: 1.8; max-width: 54ch; color: var(--muted); margin-bottom: 20px; }
-.studio-founder .studio-founder-practice { font: 10px/1.6 var(--mono); text-transform: uppercase; letter-spacing: .07em; color: var(--paper); }
+.studio-team { padding: 80px var(--studio-pad); border-bottom: 1px solid var(--rule); }
+.studio-team-copy { display: grid; grid-template-columns: 1.2fr 1fr; gap: 70px; margin-bottom: 40px; }
+.studio-team-copy h2 { font-size: clamp(38px,4.8vw,72px); font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.studio-team-copy p { font-size: 16px; line-height: 1.8; max-width: 50ch; color: var(--muted); }
+.studio-team-copy p + p { margin-top: 23px; }
+.studio-team-images { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.studio-team-images img { aspect-ratio: 1.3; height: 100%; width: 100%; object-fit: cover; background: #191919; }
 .studio-how { display: grid; grid-template-columns: 1fr 1.15fr; gap: 70px; padding: 90px var(--studio-pad); border-bottom: 1px solid var(--rule); }
 .studio-how > h2 { font-size: clamp(38px,4.8vw,72px); letter-spacing: -.03em; font-weight: 800; line-height: 1.03; }
 .studio-how article { border-top: 1px solid var(--rule); padding: 24px 0 30px; }
@@ -208,9 +209,11 @@
   .studio-project-dossier dd { font-size: 12px; }
   .studio-related-services { padding: 35px 20px; gap: 15px; flex-direction: column; align-items: start; }
   .studio-related-services h2 { font-size: 27px; margin-bottom: 10px; }
-  .studio-founders { grid-template-columns: 1fr; gap: 45px; padding: 28px 20px 48px; }
-  .studio-founder h2 { font-size: 32px; margin-top: 23px; }
-  .studio-founder > p { font-size: 14px; }
+  .studio-team { padding: 48px 20px; }
+  .studio-team-copy { grid-template-columns: 1fr; gap: 28px; margin-bottom: 30px; }
+  .studio-team-copy h2 { font-size: 39px; }
+  .studio-team-copy p { font-size: 14px; }
+  .studio-team-images { grid-template-columns: 1fr; gap: 20px; }
   .studio-how article { padding: 23px 0; }
   .studio-how h3 { font-size: 24px; }
   .studio-how p { font-size: 13px; }

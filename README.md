@@ -1,18 +1,18 @@
 # DFRBS Studio
 
-A complete creative studio website for the proposed shared practice of Ran Bensimon and Dor Fellous, speaking to brands, artists and cultural organisations. The charcoal/chrome atelier identity combines large authored imagery, individually credited project dossiers, detailed service drawers and a reviewable project brief.
+A complete creative studio website for the proposed shared practice of Ran Bensimon and Dor Fellous, speaking to brands, artists and cultural organisations. The charcoal/chrome atelier identity combines large authored imagery, one project-led work archive, detailed service drawers and a reviewable project brief.
 
 ## Experience
 
 - Home with selectable fashion, film and object showcase, motion controls and project entry points.
 - Nine selected-work dossiers, service filters, films, original credits and links to source projects.
 - Six offers: films and campaigns, 3D and digital fashion, websites and creative tools, AI production workflows, art and experiences, workshops and team training.
-- Studio profiles, process and direct links to both individual portfolios.
+- Joint studio introduction and process, with a shared body of work.
 - Project inquiry with service preselection, validation, local brief review, copy and email-draft actions.
 - Preserved object archive: studio manifesto, four-lens eyewear and Clipper sleeve; color selection, image inspection and local bag quantities/removal/totals.
 - Responsive layouts, keyboard controls, accessible dialogs and reduced-motion support.
 
-Earlier commissions keep their founder and collaborator credits. The shared studio’s service scopes and engagement models are proposals; see [the strategy](docs/STUDIO-STRATEGY.md).
+Showcases, work tiles and service links lead with projects and disciplines. Earlier commissions keep accurate authorship and collaborator credits in project details. The shared studio’s service scopes and engagement models are proposals; see [the strategy](docs/STUDIO-STRATEGY.md).
 
 ## Routes
 
